@@ -27,7 +27,7 @@ export default function T3Blog({ onSelectPost }) {
               <Sparkles className="w-3 h-3 text-[#D68D82]" />
               <span>COMMUNITY VOICES</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-serif font-black tracking-tight text-[#34252A] leading-tight">
+            <h2 className="text-3xl sm:text-5xl font-quando font-normal tracking-tight text-[#34252A] leading-tight">
               From Our Blog
             </h2>
             <p className="text-[#34252A]/80 text-sm sm:text-base mt-2 font-light leading-relaxed">

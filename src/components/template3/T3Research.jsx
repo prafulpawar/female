@@ -13,7 +13,7 @@ export default function T3Research() {
             <Sparkles className="w-3 h-3 text-[#D68D82]" />
             <span>KNOWLEDGE HUB</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-serif font-black tracking-tight text-[#34252A] leading-tight">
+          <h2 className="text-3xl sm:text-5xl font-quando font-normal tracking-tight text-[#34252A] leading-tight">
             Research Hub
           </h2>
           <p className="text-base sm:text-lg text-[#873F50] font-serif italic">
@@ -42,7 +42,7 @@ export default function T3Research() {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-serif font-bold text-[#34252A] group-hover:text-[#873F50] transition-colors leading-snug">
+                  <h3 className="text-xl font-quando font-normal text-[#34252A] group-hover:text-[#873F50] transition-colors leading-snug">
                     {report.title}
                   </h3>
                   <p className="text-xs font-bold text-[#D68D82] mt-1">

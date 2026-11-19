@@ -13,7 +13,7 @@ export default function T3Team({ onNavigate }) {
             <Sparkles className="w-3 h-3 text-[#D68D82]" />
             <span>LEADERSHIP & FELLOWS</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-serif font-black tracking-tight text-[#34252A] leading-tight">
+          <h2 className="text-3xl sm:text-5xl font-quando font-normal tracking-tight text-[#34252A] leading-tight">
             Meet the Team
           </h2>
           <p className="text-[#34252A]/80 text-sm sm:text-base font-light leading-relaxed">
@@ -48,7 +48,7 @@ export default function T3Team({ onNavigate }) {
               <span className="text-xs text-[#873F50] font-serif italic">Est. 2019</span>
             </div>
 
-            <h3 className="text-2xl sm:text-3xl font-serif font-bold text-[#34252A]">
+            <h3 className="text-2xl sm:text-3xl font-quando font-normal text-[#34252A]">
               Dr. Tapo Chimbganda
             </h3>
             <p className="text-xs font-bold uppercase tracking-wider text-[#873F50]">
@@ -77,7 +77,7 @@ export default function T3Team({ onNavigate }) {
 
         {/* Staff Directory */}
         <div className="space-y-6">
-          <h3 className="text-xl font-serif font-bold text-[#34252A]">
+          <h3 className="text-xl font-quando font-normal text-[#34252A]">
             Staff Researchers & Project Leads
           </h3>
 

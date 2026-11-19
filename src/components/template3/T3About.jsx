@@ -108,9 +108,10 @@ export default function T3About({ onNavigate, onApplyBoard }) {
               <div className="lg:col-span-5">
                 <div className="rounded-2xl overflow-hidden border-2 border-white shadow-xl aspect-[4/3] bg-stone-100">
                   <img
-                    src="/images/live_site/about_32.jpg"
+                    src="/images/downloaded/about_32.jpg"
                     alt="Young Black woman scholar coding"
                     className="w-full h-full object-cover"
+                    onError={(e) => { e.target.src = '/images/live_site/pillar_career.jpg'; }}
                   />
                 </div>
               </div>
@@ -129,9 +130,10 @@ export default function T3About({ onNavigate, onApplyBoard }) {
             <div className="lg:col-span-5">
               <div className="rounded-3xl overflow-hidden border-4 border-white shadow-xl aspect-[4/5] bg-stone-100">
                 <img
-                  src="/images/live_site/about_29.jpg"
+                  src="/images/downloaded/about_29.jpg"
                   alt="Two young Black women smiling together in community"
                   className="w-full h-full object-cover"
+                  onError={(e) => { e.target.src = '/images/live_site/about_two_women.jpg'; }}
                 />
               </div>
             </div>
@@ -219,11 +221,12 @@ export default function T3About({ onNavigate, onApplyBoard }) {
             </div>
 
             <div className="lg:col-span-6">
-              <div className="rounded-3xl overflow-hidden border-4 border-white/20 shadow-2xl bg-stone-900">
+              <div className="rounded-3xl overflow-hidden border-4 border-white/20 shadow-2xl bg-stone-900 aspect-[4/3]">
                 <img
-                  src="/images/live_site/about_33.jpg"
+                  src="/images/downloaded/about_33.jpg"
                   alt="Four Black women smiling together in solidarity"
                   className="w-full h-full object-cover"
+                  onError={(e) => { e.target.src = '/images/live_site/hero_darina.jpg'; }}
                 />
               </div>
             </div>
@@ -287,13 +290,39 @@ export default function T3About({ onNavigate, onApplyBoard }) {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {BOARD_MEMBERS.map((bm) => (
-                <div key={bm.name} className="p-6 rounded-2xl bg-white border border-[#EAD5D5] shadow-2xs space-y-2">
-                  <h4 className="font-bold text-base text-[#34252A]">{bm.name}</h4>
-                  <p className="text-xs text-[#873F50] font-semibold">{bm.role}</p>
-                  <p className="text-xs text-[#34252A]/70 font-light">{bm.background}</p>
-                </div>
-              ))}
+              {BOARD_MEMBERS.map((bm, idx) => {
+                const avatarPhotos = [
+                  '/images/downloaded/team_46.jpg',
+                  '/images/downloaded/team_47.jpg',
+                  '/images/downloaded/team_48.jpg',
+                  '/images/downloaded/team_50.jpg',
+                  '/images/downloaded/team_51.jpg',
+                  '/images/downloaded/team_52.jpg',
+                  '/images/downloaded/team_54.jpg',
+                  '/images/downloaded/team_55.jpg',
+                  '/images/downloaded/team_56.jpg',
+                  '/images/downloaded/team_64.jpg'
+                ];
+                const photo = avatarPhotos[idx % avatarPhotos.length];
+
+                return (
+                  <div key={bm.name} className="p-6 rounded-2xl bg-white border border-[#EAD5D5] shadow-2xs space-y-3 text-left group hover:shadow-md transition-all">
+                    <div className="w-14 h-14 rounded-2xl overflow-hidden bg-stone-100 border border-[#D68D82]/50 shadow-2xs">
+                      <img
+                        src={photo}
+                        alt={bm.name}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        onError={(e) => { e.target.src = '/images/live_site/about_two_women.jpg'; }}
+                      />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-base text-[#34252A]">{bm.name}</h4>
+                      <p className="text-xs text-[#873F50] font-semibold">{bm.role}</p>
+                      <p className="text-xs text-[#34252A]/70 font-light mt-1">{bm.background}</p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
 

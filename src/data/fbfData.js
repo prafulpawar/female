@@ -1037,13 +1037,33 @@ export const HERO_SLIDES = [
   },
   {
     id: "slide-3",
+    tag: "Academic Excellence",
+    headline: "Future Black Trailblazers: $500 Brock University Scholarships.",
+    subtitle: "Recognizing the brilliance, resilience, and civic leadership of incoming Black scholars navigating post-secondary education.",
+    image: "/images/live_site/intern_nappy.jpg",
+    actionText: "Apply for Bursary",
+    actionPage: "about",
+    accent: "#873F50"
+  },
+  {
+    id: "slide-4",
     tag: "Economic Sovereignty",
-    headline: "Building generational wealth and career leadership.",
-    subtitle: "Connecting youth with high-impact executive mentors, investment literacy labs, and paid professional apprenticeships.",
-    image: "/images/live_site/pillar_career.jpg",
-    actionText: "Build With Us",
-    actionPage: "donate",
+    headline: "Building generational wealth and sovereign youth enterprise.",
+    subtitle: "Connecting youth with high-impact executive mentors, investment literacy labs, free tax clinics, and seed micro-grants.",
+    image: "/images/live_site/pillar_financial.jpg",
+    actionText: "Explore Wealth Hub",
+    actionPage: "programs",
     accent: "#D48B28"
+  },
+  {
+    id: "slide-5",
+    tag: "Workforce Leadership",
+    headline: "Paid internships and executive sponsorship pipelines.",
+    subtitle: "Eliminating systemic labor market barriers through Canada Summer Jobs placements and direct corporate sponsorship clinics.",
+    image: "/images/live_site/pillar_career.jpg",
+    actionText: "View Placements",
+    actionPage: "vacancies",
+    accent: "#7C3AED"
   }
 ];
 

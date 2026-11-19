@@ -162,7 +162,7 @@ export default function T2BentoPillars({ onNavigate }) {
               <div>
                 <div className="aspect-[4/3.5] overflow-hidden bg-rose-100 relative">
                   <img
-                    src="/images/live_site/pillar_financial_wellbeing.jpg"
+                    src="/images/live_site/pillar_financial.jpg"
                     alt="Financial Wellbeing & Literacy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
@@ -205,7 +205,7 @@ export default function T2BentoPillars({ onNavigate }) {
               <div>
                 <div className="aspect-[4/3.5] overflow-hidden bg-rose-100 relative">
                   <img
-                    src="/images/live_site/pillar_career_education.jpg"
+                    src="/images/live_site/pillar_career.jpg"
                     alt="Career & Education Strategies"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
@@ -442,27 +442,38 @@ export default function T2BentoPillars({ onNavigate }) {
             Thank you for our founder and partners
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 items-center justify-items-center pt-2">
-            <div className="p-4 flex items-center justify-center">
-              <img
-                src="/images/live_site/funder_otf.png"
-                alt="Ontario Trillium Foundation"
-                className="max-h-20 sm:max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all"
-              />
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 items-center justify-items-center max-w-4xl mx-auto py-4">
+            {/* 1. Ontario Trillium Foundation */}
+            <div className="p-6 rounded-2xl border border-slate-200 bg-white flex flex-col items-center justify-center text-center space-y-2 w-full max-w-[260px] h-36 shadow-xs">
+              <div className="w-10 h-10 rounded-full border-2 border-emerald-600 flex items-center justify-center text-emerald-600 font-bold text-sm">
+                ☘
+              </div>
+              <div className="text-xs font-bold text-slate-800 uppercase tracking-tight leading-tight">
+                Ontario Trillium Foundation
+              </div>
+              <div className="text-[10px] text-slate-500 italic leading-none">
+                Fondation Trillium de l'Ontario
+              </div>
             </div>
-            <div className="p-4 flex items-center justify-center">
-              <img
-                src="/images/live_site/funder_brock_linc.png"
-                alt="Brock LINC"
-                className="max-h-14 sm:max-h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
-              />
+
+            {/* 2. Brock LINC */}
+            <div className="p-6 rounded-2xl border border-slate-200 bg-[#CC0000] text-white flex flex-col items-center justify-center text-center space-y-0.5 w-full max-w-[220px] h-36 shadow-sm">
+              <span className="font-bold text-xl sm:text-2xl tracking-tighter uppercase font-sans">
+                Brock
+              </span>
+              <span className="font-bold text-xl sm:text-2xl tracking-tighter uppercase font-sans text-white/95">
+                LINC
+              </span>
             </div>
-            <div className="p-4 flex items-center justify-center">
-              <img
-                src="/images/live_site/funder_downtown_stc.png"
-                alt="Downtown St. Catharines"
-                className="max-h-14 sm:max-h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all"
-              />
+
+            {/* 3. Downtown St. Catharines */}
+            <div className="p-6 rounded-2xl border border-slate-200 bg-white flex flex-col items-center justify-center text-center space-y-1 w-full max-w-[260px] h-36 shadow-xs">
+              <div className="font-bold text-lg text-[#00838F] tracking-wider uppercase border-b-2 border-[#00838F] pb-1 w-full">
+                DOWNTOWN
+              </div>
+              <div className="text-[11px] font-bold text-slate-700 tracking-widest uppercase">
+                ST. CATHARINES
+              </div>
             </div>
           </div>
 

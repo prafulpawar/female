@@ -32,7 +32,7 @@ export default function T3ProgramsBento() {
             <span>FBF PROGRAMMATIC CATALOGUE • 12 INITIATIVES</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-black tracking-tight text-[#FFF9F2] max-w-3xl leading-tight">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-quando font-normal tracking-tight text-[#FFF9F2] max-w-3xl leading-tight">
             Holistic Care & Sisterhood Initiatives.
           </h1>
 
@@ -86,7 +86,7 @@ export default function T3ProgramsBento() {
                   {featuredLead.category} • {featuredLead.audience}
                 </span>
 
-                <h2 className="text-2xl sm:text-4xl font-serif font-black text-[#34252A] leading-tight">
+                <h2 className="text-2xl sm:text-4xl font-quando font-normal text-[#34252A] leading-tight">
                   {featuredLead.title}
                 </h2>
 
@@ -145,7 +145,7 @@ export default function T3ProgramsBento() {
                 </div>
 
                 <div className="space-y-2">
-                  <h3 className="font-serif font-bold text-xl text-[#34252A] leading-snug">
+                  <h3 className="font-quando font-normal text-xl text-[#34252A] leading-snug">
                     {prog.title}
                   </h3>
                   <span className="text-[11px] font-mono text-[#873F50] block font-semibold">

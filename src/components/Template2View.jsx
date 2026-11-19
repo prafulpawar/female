@@ -16,6 +16,7 @@ import T2Footer from './template2/T2Footer';
 // Shared Components
 import Breadcrumbs from './shared/Breadcrumbs';
 import CampaignProgressBar from './shared/CampaignProgressBar';
+import HeroSlider from './shared/HeroSlider';
 import Accordion from './shared/Accordion';
 import { FAQ_DATA, ORG_DATA } from '../data/fbfData';
 
@@ -28,6 +29,7 @@ export default function Template2View({
   initialPage = 'home'
 }) {
   const [currentPage, setCurrentPage] = useState(initialPage);
+  const [heroMode, setHeroMode] = useState('standard');
 
   const handleNavigate = (pageOrAnchor) => {
     let targetPage = pageOrAnchor;
@@ -74,7 +76,39 @@ export default function Template2View({
         {/* 1. HOMEPAGE VIEW: High-Touch Human-Centric Pink Theme */}
         {currentPage === 'home' && (
           <div className="animate-fade-in space-y-12 pb-12">
-            <T2Hero onOpenDonate={onOpenDonate} onNavigate={handleNavigate} />
+            
+            {/* Hero Section with Slider/Carousel Toggle Switch */}
+            <div className="relative">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 flex justify-end">
+                <div className="inline-flex items-center gap-1 p-1 bg-white border border-rose-200 rounded-xl text-xs font-semibold shadow-2xs">
+                  <span className="text-slate-500 px-2 text-[11px] uppercase tracking-wider font-bold">Hero View:</span>
+                  <button
+                    onClick={() => setHeroMode('standard')}
+                    className={`px-3 py-1 rounded-lg transition-colors cursor-pointer ${
+                      heroMode === 'standard' ? 'bg-[#E11D48] text-white shadow-xs' : 'text-slate-600 hover:text-slate-900'
+                    }`}
+                  >
+                    Authentic Cover
+                  </button>
+                  <button
+                    onClick={() => setHeroMode('carousel')}
+                    className={`px-3 py-1 rounded-lg transition-colors cursor-pointer ${
+                      heroMode === 'carousel' ? 'bg-[#E11D48] text-white shadow-xs' : 'text-slate-600 hover:text-slate-900'
+                    }`}
+                  >
+                    Image Carousel (Auto)
+                  </button>
+                </div>
+              </div>
+
+              {heroMode === 'standard' ? (
+                <T2Hero onOpenDonate={onOpenDonate} onNavigate={handleNavigate} />
+              ) : (
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                  <HeroSlider onNavigate={handleNavigate} onOpenDonate={onOpenDonate} theme="rose" />
+                </div>
+              )}
+            </div>
             
             {/* Campaign Progress Gauge */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

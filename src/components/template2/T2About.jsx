@@ -11,9 +11,10 @@ export default function T2About({ onNavigate, onApplyBoard }) {
       <section className="relative w-full bg-slate-900 overflow-hidden">
         <div className="relative h-[380px] sm:h-[460px] w-full">
           <img
-            src="/images/live_site/about_32.jpg"
+            src="/images/downloaded/about_32.jpg"
             alt="Young Black woman studying in computer lab"
             className="w-full h-full object-cover object-center"
+            onError={(e) => { e.target.src = '/images/live_site/pillar_career.jpg'; }}
           />
           <div className="absolute inset-0 bg-black/40" />
 
@@ -78,7 +79,7 @@ export default function T2About({ onNavigate, onApplyBoard }) {
             <div className="lg:col-span-5">
               <div className="rounded-[2.5rem] overflow-hidden shadow-xl aspect-[4/5] bg-slate-100 max-w-sm mx-auto lg:max-w-none">
                 <img
-                  src="/images/live_site/about_29.jpg"
+                  src="/images/live_site/about_two_women.jpg"
                   alt="Two young Black women smiling together against colorful wall"
                   className="w-full h-full object-cover"
                 />
@@ -136,9 +137,10 @@ export default function T2About({ onNavigate, onApplyBoard }) {
           {/* Wide Rounded Photo Card of 4 Women */}
           <div className="rounded-[2.5rem] overflow-hidden shadow-2xl aspect-[16/9] sm:aspect-[2.2/1] bg-slate-900 border border-purple-400/30">
             <img
-              src="/images/live_site/about_33.jpg"
+              src="/images/downloaded/about_33.jpg"
               alt="Four Black women smiling together in solidarity"
               className="w-full h-full object-cover"
+              onError={(e) => { e.target.src = '/images/live_site/hero_darina.jpg'; }}
             />
           </div>
 
@@ -226,22 +228,39 @@ export default function T2About({ onNavigate, onApplyBoard }) {
             Thank you for our founder and partners
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 items-center justify-items-center max-w-4xl mx-auto py-4">
-            <img
-              src="/images/live_site/partner_otf.png"
-              alt="Ontario Trillium Foundation"
-              className="max-h-20 sm:max-h-24 w-auto object-contain"
-            />
-            <img
-              src="/images/live_site/partner_brock.png"
-              alt="Brock LINC"
-              className="max-h-16 sm:max-h-20 w-auto object-contain"
-            />
-            <img
-              src="/images/live_site/partner_downtown.png"
-              alt="Downtown St. Catharines"
-              className="max-h-16 sm:max-h-20 w-auto object-contain"
-            />
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 items-center justify-items-center max-w-4xl mx-auto py-4">
+            {/* 1. Ontario Trillium Foundation */}
+            <div className="p-6 rounded-2xl border border-slate-200 bg-white flex flex-col items-center justify-center text-center space-y-2 w-full max-w-[260px] h-36 shadow-xs">
+              <div className="w-10 h-10 rounded-full border-2 border-emerald-600 flex items-center justify-center text-emerald-600 font-bold text-sm">
+                ☘
+              </div>
+              <div className="text-xs font-bold text-slate-800 uppercase tracking-tight leading-tight">
+                Ontario Trillium Foundation
+              </div>
+              <div className="text-[10px] text-slate-500 italic leading-none">
+                Fondation Trillium de l'Ontario
+              </div>
+            </div>
+
+            {/* 2. Brock LINC */}
+            <div className="p-6 rounded-2xl border border-slate-200 bg-[#CC0000] text-white flex flex-col items-center justify-center text-center space-y-0.5 w-full max-w-[220px] h-36 shadow-sm">
+              <span className="font-bold text-xl sm:text-2xl tracking-tighter uppercase font-sans">
+                Brock
+              </span>
+              <span className="font-bold text-xl sm:text-2xl tracking-tighter uppercase font-sans text-white/95">
+                LINC
+              </span>
+            </div>
+
+            {/* 3. Downtown St. Catharines */}
+            <div className="p-6 rounded-2xl border border-slate-200 bg-white flex flex-col items-center justify-center text-center space-y-1 w-full max-w-[260px] h-36 shadow-xs">
+              <div className="font-bold text-lg text-[#00838F] tracking-wider uppercase border-b-2 border-[#00838F] pb-1 w-full">
+                DOWNTOWN
+              </div>
+              <div className="text-[11px] font-bold text-slate-700 tracking-widest uppercase">
+                ST. CATHARINES
+              </div>
+            </div>
           </div>
 
           <div>

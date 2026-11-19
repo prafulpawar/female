@@ -16,7 +16,9 @@ import T3Footer from './template3/T3Footer';
 // Interactive Components
 import Breadcrumbs from './shared/Breadcrumbs';
 import CampaignProgressBar from './shared/CampaignProgressBar';
+import HeroSlider from './shared/HeroSlider';
 import MegaCarousel from './shared/MegaCarousel';
+import T3PhotoCarousel from './shared/T3PhotoCarousel';
 import Accordion from './shared/Accordion';
 import { FAQ_DATA, PROGRAMS, ORG_DATA } from '../data/fbfData';
 
@@ -29,6 +31,7 @@ export default function Template3View({
   initialPage = 'home'
 }) {
   const [currentPage, setCurrentPage] = useState(initialPage);
+  const [heroMode, setHeroMode] = useState('standard');
 
   const handleNavigate = (pageOrAnchor) => {
     let targetPage = pageOrAnchor;
@@ -71,7 +74,39 @@ export default function Template3View({
         {/* 1. HOMEPAGE VIEW: Exact User Hero, What We Do, Funders & Interns */}
         {currentPage === 'home' && (
           <div className="animate-fade-in space-y-12 pb-16">
-            <T3Hero onOpenDonate={onOpenDonate} onNavigate={handleNavigate} />
+            
+            {/* Hero Section with Slider/Carousel Toggle Switch */}
+            <div className="relative">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 flex justify-end">
+                <div className="inline-flex items-center gap-1 p-1 bg-white border border-[#EAD5D5] rounded-xl text-xs font-semibold shadow-2xs">
+                  <span className="text-slate-500 px-2 text-[11px] uppercase tracking-wider font-bold">Hero View:</span>
+                  <button
+                    onClick={() => setHeroMode('standard')}
+                    className={`px-3 py-1 rounded-lg transition-colors cursor-pointer ${
+                      heroMode === 'standard' ? 'bg-[#873F50] text-[#FFF9F2] shadow-xs' : 'text-slate-600 hover:text-slate-900'
+                    }`}
+                  >
+                    Authentic Cover
+                  </button>
+                  <button
+                    onClick={() => setHeroMode('carousel')}
+                    className={`px-3 py-1 rounded-lg transition-colors cursor-pointer ${
+                      heroMode === 'carousel' ? 'bg-[#873F50] text-[#FFF9F2] shadow-xs' : 'text-slate-600 hover:text-slate-900'
+                    }`}
+                  >
+                    Image Carousel (Auto)
+                  </button>
+                </div>
+              </div>
+
+              {heroMode === 'standard' ? (
+                <T3Hero onOpenDonate={onOpenDonate} onNavigate={handleNavigate} />
+              ) : (
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                  <HeroSlider onNavigate={handleNavigate} onOpenDonate={onOpenDonate} theme="burgundy" />
+                </div>
+              )}
+            </div>
 
             {/* Campaign Progress Gauge */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,6 +114,9 @@ export default function Template3View({
             </div>
 
             <T3WhatWeDo onNavigate={handleNavigate} />
+
+            {/* Authentic 12-Photo Community & Sisterhood Carousel */}
+            <T3PhotoCarousel onNavigate={handleNavigate} />
 
             {/* Horizontal Mega Carousel for 12 Programs */}
             <section className="py-12 bg-[#F7E8E8]/30 border-y border-[#EAD5D5]">
@@ -98,7 +136,7 @@ export default function Template3View({
                 <span className="text-xs uppercase font-bold tracking-widest text-[#873F50]">
                   Sisterhood & Common Questions
                 </span>
-                <h3 className="text-2xl sm:text-3xl font-serif font-black text-[#34252A]">
+                <h3 className="text-2xl sm:text-3xl font-quando font-normal text-[#34252A]">
                   Frequently Asked Questions
                 </h3>
                 <p className="text-xs sm:text-sm text-[#34252A]/70">
@@ -132,7 +170,7 @@ export default function Template3View({
                 <span className="text-xs font-bold uppercase tracking-widest text-[#D9B879]">
                   Gatherings & Sisters
                 </span>
-                <h1 className="text-3xl sm:text-5xl font-serif font-black">
+                <h1 className="text-3xl sm:text-5xl font-quando font-normal">
                   Community Events
                 </h1>
                 <p className="text-[#FFF9F2]/80 text-sm sm:text-base max-w-3xl">
@@ -152,7 +190,7 @@ export default function Template3View({
                 <span className="text-xs font-bold uppercase tracking-widest text-[#D9B879]">
                   Sisterhood & Leadership
                 </span>
-                <h1 className="text-3xl sm:text-5xl font-serif font-black">
+                <h1 className="text-3xl sm:text-5xl font-quando font-normal">
                   Our Team & Fellows
                 </h1>
                 <p className="text-[#FFF9F2]/80 text-sm sm:text-base max-w-3xl">
@@ -172,7 +210,7 @@ export default function Template3View({
                 <span className="text-xs font-bold uppercase tracking-widest text-[#D9B879]">
                   Empirical Evidence
                 </span>
-                <h1 className="text-3xl sm:text-5xl font-serif font-black">
+                <h1 className="text-3xl sm:text-5xl font-quando font-normal">
                   Research Hub & Clinical Guides
                 </h1>
                 <p className="text-[#FFF9F2]/80 text-sm sm:text-base max-w-3xl">
@@ -192,7 +230,7 @@ export default function Template3View({
                 <span className="text-xs font-bold uppercase tracking-widest text-[#D9B879]">
                   Stories & Reflections
                 </span>
-                <h1 className="text-3xl sm:text-5xl font-serif font-black">
+                <h1 className="text-3xl sm:text-5xl font-quando font-normal">
                   Community Blog
                 </h1>
                 <p className="text-[#FFF9F2]/80 text-sm sm:text-base max-w-3xl">
@@ -212,7 +250,7 @@ export default function Template3View({
                 <span className="text-xs font-bold uppercase tracking-widest text-[#D9B879]">
                   Support Our Mission
                 </span>
-                <h1 className="text-3xl sm:text-5xl font-serif font-black">
+                <h1 className="text-3xl sm:text-5xl font-quando font-normal">
                   Invest in Black Girls
                 </h1>
                 <p className="text-[#FFF9F2]/80 text-sm sm:text-base max-w-3xl">
@@ -232,7 +270,7 @@ export default function Template3View({
                 <span className="text-xs font-bold uppercase tracking-widest text-[#D9B879]">
                   Join Our Team
                 </span>
-                <h1 className="text-3xl sm:text-5xl font-serif font-black">
+                <h1 className="text-3xl sm:text-5xl font-quando font-normal">
                   Vacancies & Fellowships
                 </h1>
                 <p className="text-[#FFF9F2]/80 text-sm sm:text-base max-w-3xl">
@@ -252,7 +290,7 @@ export default function Template3View({
                 <span className="text-xs font-bold uppercase tracking-widest text-[#D9B879]">
                   Get In Touch
                 </span>
-                <h1 className="text-3xl sm:text-5xl font-serif font-black">
+                <h1 className="text-3xl sm:text-5xl font-quando font-normal">
                   Contact Future Black Female
                 </h1>
                 <p className="text-[#FFF9F2]/80 text-sm sm:text-base max-w-3xl">

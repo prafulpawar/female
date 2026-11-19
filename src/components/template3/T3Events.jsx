@@ -48,7 +48,7 @@ export default function T3Events({ onSelectEvent }) {
               <Sparkles className="w-3 h-3 text-[#D68D82]" />
               <span>COMMUNITY CONVENINGS</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-serif font-black tracking-tight text-[#34252A] leading-tight">
+            <h2 className="text-3xl sm:text-5xl font-quando font-normal tracking-tight text-[#34252A] leading-tight">
               Our Events Schedule
             </h2>
             <p className="text-[#34252A]/80 text-sm sm:text-base font-light leading-relaxed">
@@ -154,7 +154,7 @@ export default function T3Events({ onSelectEvent }) {
                       )}
                     </div>
 
-                    <h3 className="text-lg sm:text-xl font-serif font-bold text-[#34252A] group-hover:text-[#873F50] transition-colors leading-snug">
+                    <h3 className="text-lg sm:text-xl font-quando font-normal text-[#34252A] group-hover:text-[#873F50] transition-colors leading-snug">
                       {evt.title}
                     </h3>
 
