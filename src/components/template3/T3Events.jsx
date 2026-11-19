@@ -220,6 +220,133 @@ export default function T3Events({ onSelectEvent }) {
         )}
 
       </div>
+
+      {/* 2. COMMUNITY SUMMITS & CONVENINGS PHOTO ARCHIVE (Full Royal Purple Background) */}
+      <div className="mt-20 py-20 sm:py-24 bg-[#5B3396] text-white border-t border-purple-900/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <span className="inline-block px-3.5 py-1 rounded-full bg-white/15 text-[#FDF289] text-xs font-mono font-bold uppercase tracking-widest border border-white/20">
+              NATIONAL CONVENINGS
+            </span>
+            <h2 className="font-quando text-3xl sm:text-4xl lg:text-5xl font-normal text-[#FDF289] tracking-tight">
+              Gatherings That Shift Systems
+            </h2>
+            <p className="text-white/85 text-sm sm:text-base font-light">
+              From the Black Women in Tech Roundtables to our Annual Youth Mental Health Summits in Ottawa and Niagara.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+            <div className="bg-white/10 backdrop-blur-md rounded-3xl overflow-hidden border border-white/20 shadow-xl group">
+              <div className="aspect-[16/10] bg-stone-900 overflow-hidden">
+                <img
+                  src="/images/live_site/hero_darina.jpg"
+                  alt="National Summit"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-6 space-y-2">
+                <span className="text-[10px] uppercase font-bold text-[#FDF289] tracking-wider block">
+                  ANNUAL POLICY SUMMIT
+                </span>
+                <h3 className="font-quando text-xl text-white font-normal">
+                  Breaking The Cycle Conference
+                </h3>
+                <p className="text-xs text-white/80 font-light leading-relaxed">
+                  Confronting systemic disparities in K-12 education with school board deans, parents, and Black youth.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-md rounded-3xl overflow-hidden border border-white/20 shadow-xl group">
+              <div className="aspect-[16/10] bg-stone-900 overflow-hidden">
+                <img
+                  src="/images/downloaded/events_104.jpg"
+                  alt="Invest Ottawa Roundtable"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  onError={(e) => { e.target.src = '/images/live_site/pillar_financial.jpg'; }}
+                />
+              </div>
+              <div className="p-6 space-y-2">
+                <span className="text-[10px] uppercase font-bold text-[#FDF289] tracking-wider block">
+                  INVEST OTTAWA • BEKH
+                </span>
+                <h3 className="font-quando text-xl text-white font-normal">
+                  Black Women In Tech Roundtable
+                </h3>
+                <p className="text-xs text-white/80 font-light leading-relaxed">
+                  Convening founders across Ontario to address venture access and systemic policy recommendations.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-md rounded-3xl overflow-hidden border border-white/20 shadow-xl group">
+              <div className="aspect-[16/10] bg-stone-900 overflow-hidden">
+                <img
+                  src="/images/downloaded/events_110.jpg"
+                  alt="Niagara Walkathon"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  onError={(e) => { e.target.src = '/images/live_site/about_two_women.jpg'; }}
+                />
+              </div>
+              <div className="p-6 space-y-2">
+                <span className="text-[10px] uppercase font-bold text-[#FDF289] tracking-wider block">
+                  COMMUNITY WELLNESS
+                </span>
+                <h3 className="font-quando text-xl text-white font-normal">
+                  Niagara Waterfront Walkathon
+                </h3>
+                <p className="text-xs text-white/80 font-light leading-relaxed">
+                  Moving with purpose along the Lakeview Park waterfront trail to fund youth therapy bursaries.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 3. ANNUAL GALA & SCHOLARSHIP BANNER (Full Butter Yellow Background) */}
+      <div className="py-20 sm:py-24 bg-[#FDF289] text-slate-950 border-t border-amber-300">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-7 space-y-5 text-left">
+              <span className="inline-block px-3.5 py-1 rounded-full bg-slate-950 text-[#FDF289] text-xs font-mono font-bold uppercase tracking-widest">
+                SIGNATURE ANNUAL GALA
+              </span>
+              <h2 className="font-quando text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-950 leading-tight">
+                Future Black Trailblazers Gala & Awards
+              </h2>
+              <p className="text-slate-800 text-sm sm:text-base leading-relaxed font-light">
+                Celebrating incoming Brock University Black scholars with $500 scholarship presentations, keynote addresses from leading Black women executives, and community recognition awards.
+              </p>
+              <div className="pt-2 flex items-center gap-4">
+                <a
+                  href="https://futureblackfemale.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-3.5 rounded-full bg-slate-950 hover:bg-slate-800 text-[#FDF289] font-bold text-xs uppercase tracking-wider transition-all shadow-md active:scale-95 inline-flex items-center gap-2"
+                >
+                  <span>Reserve Gala Seat</span>
+                  <ArrowUpRight className="w-4 h-4 text-[#FDF289]" />
+                </a>
+                <span className="text-xs text-slate-700 font-mono">
+                  August 15, 2026 • Brock Alumni Pavilion
+                </span>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5">
+              <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-950/20 aspect-[4/3] bg-stone-900 group">
+                <img
+                  src="/images/live_site/intern_nappy.jpg"
+                  alt="Future Black Trailblazers Gala"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

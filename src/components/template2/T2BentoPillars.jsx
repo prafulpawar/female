@@ -10,7 +10,7 @@ export default function T2BentoPillars({ onNavigate }) {
       <section className="py-20 sm:py-28 bg-white border-b border-rose-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            
+
             {/* Left Photo Composition with Quote Overlay */}
             <div className="lg:col-span-5 relative">
               <div className="rounded-[2.5rem] overflow-hidden shadow-2xl aspect-[4/4.8] bg-rose-50 border-4 border-rose-100/60 max-w-md mx-auto lg:max-w-none relative group">
@@ -20,7 +20,7 @@ export default function T2BentoPillars({ onNavigate }) {
                   className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                
+
                 {/* Embedded Quote Card at Bottom of Photo */}
                 <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/95 backdrop-blur-md text-slate-900 shadow-xl border border-rose-100 space-y-1">
                   <p className="text-xs font-serif italic text-slate-800 leading-snug">
@@ -110,7 +110,7 @@ export default function T2BentoPillars({ onNavigate }) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
-            
+
             {/* Pillar 1: Pro-Black Mental Health Services */}
             <div
               onClick={() => onNavigate('programs')}
@@ -137,7 +137,7 @@ export default function T2BentoPillars({ onNavigate }) {
                   <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-light">
                     Afrocentric, trauma-informed psychological counseling destigmatizing emotional wellness for Black girls, offering both individual therapy and supportive peer cohorts.
                   </p>
-                  
+
                   <div className="pt-2 flex flex-wrap gap-2 text-[11px] text-slate-500 font-medium">
                     <span className="px-2.5 py-1 rounded-md bg-slate-100">Udada Support Circle</span>
                     <span className="px-2.5 py-1 rounded-md bg-slate-100">Ujamaa Brotherhood</span>
@@ -180,7 +180,7 @@ export default function T2BentoPillars({ onNavigate }) {
                   <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-light">
                     Practical wealth-building, student budgeting, tax filing clinics, and financial resilience training designed to foster generational prosperity for Black female youth.
                   </p>
-                  
+
                   <div className="pt-2 flex flex-wrap gap-2 text-[11px] text-slate-500 font-medium">
                     <span className="px-2.5 py-1 rounded-md bg-slate-100">Budgeting Clinics</span>
                     <span className="px-2.5 py-1 rounded-md bg-slate-100">Tax Preparation</span>
@@ -223,7 +223,7 @@ export default function T2BentoPillars({ onNavigate }) {
                   <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-light">
                     Equipping youth with resume clinics, university transition support, executive corporate mentorship, and our annual $500 scholarship for incoming Brock University students.
                   </p>
-                  
+
                   <div className="pt-2 flex flex-wrap gap-2 text-[11px] text-slate-500 font-medium">
                     <span className="px-2.5 py-1 rounded-md bg-slate-100">Trailblazers Grant</span>
                     <span className="px-2.5 py-1 rounded-md bg-slate-100">CSJ Paid Internships</span>
@@ -247,9 +247,9 @@ export default function T2BentoPillars({ onNavigate }) {
 
       {/* 3. MOTIVATION SECTION & 3-STEP PROCESS (Deep Berry & Pink Theme) */}
       <section className="py-20 sm:py-28 bg-[#1E1122] text-white text-center relative overflow-hidden">
-        
+
         {/* Subtle pink atmospheric warmth */}
-        <div 
+        <div
           className="absolute inset-0 pointer-events-none opacity-20"
           style={{
             backgroundImage: 'radial-gradient(circle at 50% 0%, rgba(225, 29, 72, 0.4) 0%, transparent 60%)'
@@ -257,7 +257,7 @@ export default function T2BentoPillars({ onNavigate }) {
         />
 
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-          
+
           <div className="space-y-4 max-w-3xl mx-auto">
             <span className="text-xs uppercase font-bold tracking-widest text-[#FDF289] block font-mono">
               THEORY OF CHANGE
@@ -273,8 +273,8 @@ export default function T2BentoPillars({ onNavigate }) {
           {/* 3 Process Cards with Rose & Gold Accents */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-4 text-left">
             {ENGAGEMENT_PILLARS.map((ep) => (
-              <div 
-                key={ep.number} 
+              <div
+                key={ep.number}
                 className="p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:border-[#E11D48]/50 transition-all space-y-5 flex flex-col justify-between"
               >
                 <div className="space-y-4">
@@ -334,7 +334,7 @@ export default function T2BentoPillars({ onNavigate }) {
       {/* 5. AUTHENTIC INTERN VOICES & COMMUNITY TESTIMONIALS */}
       <section className="py-20 sm:py-28 bg-gradient-to-b from-[#FFF1F2] to-white border-b border-rose-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
-          
+
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-rose-200 pb-8 text-left">
             <div className="space-y-2">
               <span className="text-xs uppercase font-bold tracking-widest text-[#E11D48] block">
@@ -401,7 +401,7 @@ export default function T2BentoPillars({ onNavigate }) {
       {/* 6. CALLOUT BANNER: RESPONSIVE & CULTURALLY RELEVANT */}
       <section className="py-20 sm:py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div 
+          <div
             className="text-white p-10 sm:p-16 rounded-[2.5rem] shadow-2xl text-center space-y-8 relative overflow-hidden"
             style={{
               background: 'linear-gradient(135deg, #BE185D 0%, #E11D48 40%, #DB2777 80%, #9D174D 100%)'
