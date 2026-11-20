@@ -125,10 +125,9 @@ export default function T3PhotoCarousel({ onNavigate }) {
         {/* Header & Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#EAD5D5] pb-8">
           <div className="space-y-3 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#F7E8E8] text-[#873F50] text-xs font-mono font-bold uppercase tracking-widest border border-[#D68D82]/30">
-              <Sparkles className="w-3.5 h-3.5 text-[#D68D82]" />
-              <span>COMMUNITY PHOTO CAROUSEL • 12 AUTHENTIC MOMENTS</span>
-            </div>
+            <p className="text-xs uppercase tracking-wider text-[#873F50] font-semibold">
+              Community Sisterhood Moments
+            </p>
             <h2 className="font-quando text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-950 tracking-tight leading-tight">
               Life at Future Black Female
             </h2>

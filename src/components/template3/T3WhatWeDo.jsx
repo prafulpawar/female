@@ -79,7 +79,7 @@ export default function T3WhatWeDo({ onNavigate }) {
       title: 'Developing Solution-Focused Strategies',
       description: 'Developing and initiating targeted, culturally relevant, and rights-based programs co-designed with Black girls and young women.',
       badge: 'Step 1 • Co-Design',
-      color: 'bg-[#5B3396]',
+      color: 'bg-[#5B60E6]',
       image: '/images/live_site/about_two_women.jpg'
     },
     {
@@ -129,9 +129,9 @@ export default function T3WhatWeDo({ onNavigate }) {
                 <div className="absolute -top-10 -right-10 w-60 h-60 bg-white/10 rounded-full blur-2xl pointer-events-none" />
 
                 <div className="space-y-3 relative z-10">
-                  <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#FDF289] block">
-                    FUTURE BLACK FEMALE
-                  </span>
+                  <p className="text-xs uppercase tracking-widest text-[#FDF289] font-semibold">
+                    Future Black Female
+                  </p>
                   
                   {/* Headline in Quando Serif and Butter Yellow */}
                   <h2 className="font-quando text-2xl sm:text-3xl lg:text-4xl font-normal text-[#FDF289] leading-[1.2]">
@@ -405,9 +405,9 @@ export default function T3WhatWeDo({ onNavigate }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <span className="text-xs uppercase font-bold tracking-widest text-[#873F50] block font-mono">
-              THEORY OF CHANGE IN ACTION
-            </span>
+            <p className="text-xs uppercase tracking-wider text-[#873F50] font-semibold">
+              Our Continuum of Care
+            </p>
             <h2 className="font-quando text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-900 tracking-tight">
               How We Walk Alongside Every Youth
             </h2>
@@ -477,9 +477,9 @@ export default function T3WhatWeDo({ onNavigate }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <span className="text-xs uppercase font-bold tracking-widest text-[#873F50] block font-mono">
-              PROVEN COMMUNITY TRACK RECORD
-            </span>
+            <p className="text-xs uppercase tracking-wider text-[#873F50] font-semibold">
+              Impact & Accountability
+            </p>
             <h2 className="font-quando text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-950 tracking-tight">
               Why Future Black Female?
             </h2>
@@ -523,9 +523,9 @@ export default function T3WhatWeDo({ onNavigate }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <span className="text-xs uppercase font-bold tracking-widest text-[#873F50] block font-mono">
-              LIFE AT FUTURE BLACK FEMALE
-            </span>
+            <p className="text-xs uppercase tracking-wider text-[#873F50] font-semibold">
+              Life at Future Black Female
+            </p>
             <h2 className="font-quando text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-950 tracking-tight">
               Sisterhood in Action: Real Moments
             </h2>
@@ -567,7 +567,7 @@ export default function T3WhatWeDo({ onNavigate }) {
                   alt="Brock University Trailblazers Award"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#5B3396] text-[#FDF289] text-[11px] font-bold">
+                <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#5B60E6] text-[#FDF289] text-[11px] font-bold">
                   Brock University Campus
                 </span>
               </div>
@@ -826,7 +826,7 @@ export default function T3WhatWeDo({ onNavigate }) {
           </div>
 
           {/* Pull-Quote Callout */}
-          <div className="bg-[#5B3396] text-white p-8 sm:p-14 rounded-3xl shadow-xl text-center space-y-6 max-w-4xl mx-auto relative overflow-hidden">
+          <div className="bg-[#5B60E6] text-white p-8 sm:p-14 rounded-3xl shadow-xl text-center space-y-6 max-w-4xl mx-auto relative overflow-hidden">
             <Quote className="w-12 h-12 text-[#FDF289]/30 mx-auto" />
             <blockquote className="font-quando font-normal text-xl sm:text-2xl lg:text-[28px] text-[#FDF289] leading-relaxed max-w-2xl mx-auto">
               "We ensure any work we do, any programs we run, and any resources and time spent are culturally relevant and responsive to the Black girls and young women we serve."
@@ -850,9 +850,9 @@ export default function T3WhatWeDo({ onNavigate }) {
           <div className="p-8 sm:p-14 rounded-3xl bg-[#FDF289] border border-amber-400 shadow-md flex flex-col lg:flex-row items-center justify-between gap-10">
             
             <div className="space-y-4 max-w-2xl text-left">
-              <span className="inline-block px-3.5 py-1 rounded-full bg-slate-950 text-[#FDF289] text-xs font-bold uppercase tracking-widest font-mono">
-                LITERARY SANCTUARY • AGES 16–22
-              </span>
+              <p className="text-xs uppercase tracking-wider text-slate-800 font-bold">
+                Youth Literary Sanctuary • Ages 16–22
+              </p>
               <h2 className="font-quando text-3xl sm:text-4xl lg:text-[44px] font-normal text-slate-950 leading-tight">
                 Book Club: Melanin & Manuscripts
               </h2>
@@ -881,9 +881,9 @@ export default function T3WhatWeDo({ onNavigate }) {
           
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-[#EAD5D5] pb-6 text-left">
             <div className="space-y-2">
-              <span className="text-xs uppercase font-bold tracking-widest text-[#873F50] block font-mono">
-                PRESS & NATIONAL RECOGNITION
-              </span>
+              <p className="text-xs uppercase tracking-wider text-[#873F50] font-semibold">
+                Press & National Recognition
+              </p>
               <h2 className="font-quando text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-950 tracking-tight">
                 Media Coverage & Thought Leadership
               </h2>

@@ -38,25 +38,22 @@ export default function T2BlogFeed({ onSelectPost }) {
             <span className="text-[10px] font-mono font-bold uppercase px-2 text-slate-400">Commentary View:</span>
             <button
               onClick={() => setViewMode('spread')}
-              className={`px-3 py-1 rounded-full text-xs font-bold transition-all cursor-pointer ${
-                viewMode === 'spread' ? 'bg-[#7C3AED] text-white' : 'text-slate-600 hover:text-[#7C3AED]'
-              }`}
+              className={`px-3 py-1 rounded-full text-xs font-bold transition-all cursor-pointer ${viewMode === 'spread' ? 'bg-[#7C3AED] text-white' : 'text-slate-600 hover:text-[#7C3AED]'
+                }`}
             >
               Editorial Spread
             </button>
             <button
               onClick={() => setViewMode('grid')}
-              className={`px-3 py-1 rounded-full text-xs font-bold transition-all cursor-pointer ${
-                viewMode === 'grid' ? 'bg-[#7C3AED] text-white' : 'text-slate-600 hover:text-[#7C3AED]'
-              }`}
+              className={`px-3 py-1 rounded-full text-xs font-bold transition-all cursor-pointer ${viewMode === 'grid' ? 'bg-[#7C3AED] text-white' : 'text-slate-600 hover:text-[#7C3AED]'
+                }`}
             >
               Masonry Cards
             </button>
             <button
               onClick={() => setViewMode('reader')}
-              className={`px-3 py-1 rounded-full text-xs font-bold transition-all cursor-pointer ${
-                viewMode === 'reader' ? 'bg-[#7C3AED] text-white' : 'text-slate-600 hover:text-[#7C3AED]'
-              }`}
+              className={`px-3 py-1 rounded-full text-xs font-bold transition-all cursor-pointer ${viewMode === 'reader' ? 'bg-[#7C3AED] text-white' : 'text-slate-600 hover:text-[#7C3AED]'
+                }`}
             >
               Reader Column
             </button>
@@ -69,11 +66,10 @@ export default function T2BlogFeed({ onSelectPost }) {
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
-                selectedCategory === cat
-                  ? 'bg-purple-100 text-[#7C3AED] border border-purple-300'
-                  : 'bg-white border border-slate-200 text-slate-600 hover:border-slate-400'
-              }`}
+              className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${selectedCategory === cat
+                ? 'bg-purple-100 text-[#7C3AED] border border-purple-300'
+                : 'bg-white border border-slate-200 text-slate-600 hover:border-slate-400'
+                }`}
             >
               {cat}
             </button>
@@ -83,9 +79,9 @@ export default function T2BlogFeed({ onSelectPost }) {
         {/* VIEW 1: MAGAZINE EDITORIAL SPREAD */}
         {viewMode === 'spread' && (
           <div className="space-y-10 animate-fade-in text-left">
-            
+
             {/* Featured Lead Essay */}
-            <div 
+            <div
               onClick={() => onSelectPost(featuredPost)}
               className="rounded-3xl bg-white border border-slate-200 shadow-md hover:shadow-2xl hover:border-[#7C3AED] transition-all p-8 sm:p-12 cursor-pointer grid grid-cols-1 lg:grid-cols-12 gap-8 items-center group"
             >
@@ -118,9 +114,9 @@ export default function T2BlogFeed({ onSelectPost }) {
               </div>
 
               <div className="lg:col-span-5 bg-gradient-to-br from-purple-100 via-pink-50 to-amber-50 rounded-2xl p-8 flex flex-col justify-between h-full min-h-[240px] border border-purple-100">
-                <Sparkles className="w-8 h-8 text-[#7C3AED]" />
+                <BookOpen className="w-8 h-8 text-[#7C3AED]" />
                 <div className="space-y-1">
-                  <span className="text-xs font-mono font-bold uppercase text-purple-900">COMMUNITY DISPATCH</span>
+                  <p className="text-xs uppercase tracking-wider text-purple-900 font-semibold">Community Dispatch</p>
                   <p className="font-serif italic text-xs text-slate-700">"Centering Black feminist perspectives, climate justice, cultural critique, and stories of resistance."</p>
                 </div>
               </div>

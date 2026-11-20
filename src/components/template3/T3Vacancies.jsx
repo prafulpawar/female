@@ -1,21 +1,20 @@
 import React from 'react';
 import { VACANCIES } from '../../data/fbfData';
-import { Briefcase, UploadCloud, Sparkles, Shield, ArrowUpRight, ArrowRight, HeartHandshake } from 'lucide-react';
+import { Briefcase, UploadCloud, Shield, ArrowUpRight, CheckCircle2, HeartHandshake, Sparkles } from 'lucide-react';
 
 export default function T3Vacancies({ onApply }) {
   return (
     <div id="t3-vacancies" className="text-[#34252A] font-sans">
       
-      {/* 1. JEDI STATEMENT & CULTURE (Full Royal Purple Background) */}
-      <section className="py-20 sm:py-24 bg-[#5B3396] text-white border-b border-purple-900/50">
+      {/* 1. JEDI STATEMENT & HERO (Full Royal Electric Indigo Background) */}
+      <section className="py-20 sm:py-24 bg-[#5B60E6] text-white border-b border-indigo-900/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
             <div className="lg:col-span-7 space-y-5 text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 text-[#FDF289] text-xs font-mono font-bold uppercase tracking-widest border border-white/20">
-                <Sparkles className="w-3.5 h-3.5 text-[#FDF289]" />
-                <span>CAREERS & SISTERHOOD FELLOWSHIPS</span>
-              </div>
+              <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-white/20 text-[#FDF289] inline-block">
+                CAREERS & FELLOWSHIPS
+              </span>
 
               <h2 className="text-3xl sm:text-5xl lg:text-6xl font-quando font-normal tracking-tight text-[#FDF289] leading-tight">
                 Work Where Purpose Thrives
@@ -51,18 +50,81 @@ export default function T3Vacancies({ onApply }) {
         </div>
       </section>
 
-      {/* 2. ACTIVE OPENINGS BENTO GRID (Full Warm Cream Background) */}
+      {/* 2. CULTURE & LIVING WAGE COMMITMENT (Full Butter Yellow Background) */}
+      <section className="py-20 sm:py-24 bg-[#FDF289] text-slate-950 border-b border-amber-300">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="text-left space-y-2 max-w-3xl">
+            <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-slate-950 text-[#FDF289] inline-block shadow-xs">
+              OUR WORKPLACE CULTURE
+            </span>
+            <h3 className="text-3xl sm:text-5xl font-quando font-normal text-slate-950">
+              The Living Wage & Wellness Pledge
+            </h3>
+            <p className="text-slate-800 text-sm sm:text-base font-light">
+              We reject unpaid student exploitation. We invest directly in our practitioners and student researchers with dignified compensation and clinical care.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+            {/* Pillar 1 */}
+            <div className="p-7 rounded-3xl bg-white text-[#34252A] border border-amber-200 shadow-md space-y-3">
+              <div className="w-10 h-10 rounded-full bg-[#5B60E6] text-[#FDF289] font-quando text-lg flex items-center justify-center font-bold">
+                1
+              </div>
+              <h4 className="font-quando font-normal text-lg text-[#34252A]">Living Wage Guarantee</h4>
+              <p className="text-xs text-[#34252A]/75 leading-relaxed font-light">
+                All internships and student research roles start at $17.50+/hr, above Ontario minimum wage standards.
+              </p>
+            </div>
+
+            {/* Pillar 2 */}
+            <div className="p-7 rounded-3xl bg-white text-[#34252A] border border-amber-200 shadow-md space-y-3">
+              <div className="w-10 h-10 rounded-full bg-[#5B60E6] text-[#FDF289] font-quando text-lg flex items-center justify-center font-bold">
+                2
+              </div>
+              <h4 className="font-quando font-normal text-lg text-[#34252A]">Clinical Supervision</h4>
+              <p className="text-xs text-[#34252A]/75 leading-relaxed font-light">
+                Free 1-on-1 mental health therapy bursaries with registered Afrocentric clinicians for all staff.
+              </p>
+            </div>
+
+            {/* Pillar 3 */}
+            <div className="p-7 rounded-3xl bg-white text-[#34252A] border border-amber-200 shadow-md space-y-3">
+              <div className="w-10 h-10 rounded-full bg-[#5B60E6] text-[#FDF289] font-quando text-lg flex items-center justify-center font-bold">
+                3
+              </div>
+              <h4 className="font-quando font-normal text-lg text-[#34252A]">Flexible Sanctuary</h4>
+              <p className="text-xs text-[#34252A]/75 leading-relaxed font-light">
+                Hybrid & remote-friendly workflow tailored to post-secondary academic exam schedules and family balance.
+              </p>
+            </div>
+
+            {/* Pillar 4 */}
+            <div className="p-7 rounded-3xl bg-white text-[#34252A] border border-amber-200 shadow-md space-y-3">
+              <div className="w-10 h-10 rounded-full bg-[#5B60E6] text-[#FDF289] font-quando text-lg flex items-center justify-center font-bold">
+                4
+              </div>
+              <h4 className="font-quando font-normal text-lg text-[#34252A]">Career Acceleration</h4>
+              <p className="text-xs text-[#34252A]/75 leading-relaxed font-light">
+                Direct co-authorship on published policy monographs and executive mentorship pairings across Canada.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. ACTIVE OPENINGS (Full Warm Cream Background) */}
       <section className="py-20 sm:py-28 bg-[#FFF9F2] text-[#34252A] border-b border-[#EAD5D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-left space-y-2">
-            <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#873F50]">
+            <span className="text-xs uppercase tracking-wider text-[#873F50] font-bold block">
               OPPORTUNITIES FOR LEADERSHIP
             </span>
-            <h3 className="text-2xl sm:text-4xl font-quando font-normal text-[#34252A]">
+            <h3 className="text-3xl sm:text-5xl font-quando font-normal text-[#34252A]">
               Open Vacancies & Fellowships
             </h3>
-            <p className="text-[#34252A]/70 text-sm max-w-2xl font-light">
+            <p className="text-[#34252A]/70 text-sm sm:text-base max-w-2xl font-light">
               We offer paid internships, research fellowships, and volunteer governance roles supporting Canadian youth.
             </p>
           </div>
@@ -106,10 +168,10 @@ export default function T3Vacancies({ onApply }) {
                 </div>
 
                 <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
-                  <span className="text-[11px] text-[#34252A]/50">File upload supported (Max 15MB)</span>
+                  <span className="text-[11px] text-[#34252A]/50 font-mono">File upload supported (Max 15MB)</span>
                   <button
                     onClick={() => onApply(job)}
-                    className="px-6 py-2.5 rounded-full bg-[#873F50] hover:bg-[#6e3140] text-white text-xs font-bold uppercase tracking-wider transition-all shadow-xs flex items-center gap-1.5 active:scale-95"
+                    className="px-6 py-2.5 rounded-full bg-[#873F50] hover:bg-[#6e3140] text-white text-xs font-bold uppercase tracking-wider transition-all shadow-xs flex items-center gap-1.5 active:scale-95 cursor-pointer"
                   >
                     <UploadCloud className="w-3.5 h-3.5" />
                     <span>Apply Now</span>
@@ -122,97 +184,78 @@ export default function T3Vacancies({ onApply }) {
         </div>
       </section>
 
-      {/* 3. FELLOWSHIP CULTURE & LIFE AT FBF (Full Warm Blush Rose Background) */}
+      {/* 4. 3-STEP RECRUITMENT JOURNEY (Full Warm Blush Rose Background) */}
       <section className="py-20 sm:py-24 bg-[#F7E8E8] text-[#34252A] border-b border-[#EAD5D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#873F50]">
-              WHY WORK WITH US
+            <span className="text-xs uppercase tracking-wider text-[#873F50] font-bold">
+              TRANSPARENT PROCESS
             </span>
             <h3 className="text-3xl sm:text-4xl font-quando font-normal text-[#34252A]">
-              Life at Future Black Female
+              How We Welcome You In
             </h3>
-            <p className="text-xs sm:text-sm text-[#34252A]/70 font-light">
-              Collaborative, supportive, and grounded in collective care.
+            <p className="text-xs sm:text-sm text-[#34252A]/75 font-light">
+              No endless automated barriers. A transparent, human-first hiring experience.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-            <div className="bg-white rounded-3xl overflow-hidden border border-[#EAD5D5] shadow-xs group">
-              <div className="aspect-[4/3] bg-stone-900 overflow-hidden">
-                <img
-                  src="/images/live_site/intern_nappy.jpg"
-                  alt="Brock U Academic Advisement"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative text-center">
+            {/* Step 1 */}
+            <div className="p-8 rounded-3xl bg-white border border-[#EAD5D5] shadow-xs space-y-4 flex flex-col items-center">
+              <div className="w-14 h-14 rounded-full bg-[#873F50] text-[#FFF9F2] font-quando text-xl flex items-center justify-center font-bold shadow-md">
+                1
               </div>
-              <div className="p-6 space-y-2">
-                <h4 className="font-quando text-lg text-[#34252A]">Mentorship & Growth</h4>
-                <p className="text-xs text-[#34252A]/70 font-light leading-relaxed">
-                  Direct pairing with executive mentors and seasoned academic researchers to elevate your professional trajectory.
-                </p>
-              </div>
+              <h4 className="font-quando font-normal text-lg text-[#34252A]">Submit CV & Reflections</h4>
+              <p className="text-xs text-[#34252A]/75 leading-relaxed font-light">
+                Submit your CV and brief cover note. Every single submission is reviewed by our leadership team within 5 business days.
+              </p>
             </div>
 
-            <div className="bg-white rounded-3xl overflow-hidden border border-[#EAD5D5] shadow-xs group">
-              <div className="aspect-[4/3] bg-stone-900 overflow-hidden">
-                <img
-                  src="/images/live_site/intern_bestbe.jpg"
-                  alt="CSJ Youth Outreach"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+            {/* Step 2 */}
+            <div className="p-8 rounded-3xl bg-white border border-[#EAD5D5] shadow-xs space-y-4 flex flex-col items-center">
+              <div className="w-14 h-14 rounded-full bg-[#873F50] text-[#FFF9F2] font-quando text-xl flex items-center justify-center font-bold shadow-md">
+                2
               </div>
-              <div className="p-6 space-y-2">
-                <h4 className="font-quando text-lg text-[#34252A]">Living-Wage Compensation</h4>
-                <p className="text-xs text-[#34252A]/70 font-light leading-relaxed">
-                  We believe equitable work deserves fair compensation. All internship positions are funded at or above Ontario living wages.
-                </p>
-              </div>
+              <h4 className="font-quando font-normal text-lg text-[#34252A]">Lived-Experience Chat</h4>
+              <p className="text-xs text-[#34252A]/75 leading-relaxed font-light">
+                A warm 30-minute conversation to explore mutual alignment, feminist values, and the real-world skills you want to build.
+              </p>
             </div>
 
-            <div className="bg-white rounded-3xl overflow-hidden border border-[#EAD5D5] shadow-xs group">
-              <div className="aspect-[4/3] bg-stone-900 overflow-hidden">
-                <img
-                  src="/images/downloaded/about_32.jpg"
-                  alt="STEM and Research Lab"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+            {/* Step 3 */}
+            <div className="p-8 rounded-3xl bg-white border border-[#EAD5D5] shadow-xs space-y-4 flex flex-col items-center">
+              <div className="w-14 h-14 rounded-full bg-[#873F50] text-[#FFF9F2] font-quando text-xl flex items-center justify-center font-bold shadow-md">
+                3
               </div>
-              <div className="p-6 space-y-2">
-                <h4 className="font-quando text-lg text-[#34252A]">Flexible & Hybrid Flow</h4>
-                <p className="text-xs text-[#34252A]/70 font-light leading-relaxed">
-                  Remote-friendly workflows balancing student academic commitments with hands-on community projects.
-                </p>
-              </div>
+              <h4 className="font-quando font-normal text-lg text-[#34252A]">Sisterhood Onboarding</h4>
+              <p className="text-xs text-[#34252A]/75 leading-relaxed font-light">
+                Receive living-wage offer, clinician mental health benefits, and pairing with an executive sponsor and project team.
+              </p>
             </div>
           </div>
-
         </div>
       </section>
 
-      {/* 4. SPONTANEOUS PITCH (Full Butter Yellow Background) */}
-      <section className="py-16 sm:py-20 bg-[#FDF289] text-slate-950 border-b border-amber-300">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <div className="w-14 h-14 rounded-full bg-slate-950 text-[#FDF289] flex items-center justify-center mx-auto shadow-md">
-            <HeartHandshake className="w-7 h-7" />
-          </div>
-          <div className="space-y-2">
-            <h3 className="font-quando text-3xl sm:text-4xl text-slate-950 font-normal">
-              Don't See the Exact Role for You?
-            </h3>
-            <p className="text-slate-800 text-sm max-w-xl mx-auto font-light leading-relaxed">
-              We are always eager to connect with clinicians, workshop facilitators, event planners, and creative writers who want to uplift Black girls.
-            </p>
-          </div>
-          <div>
-            <a
-              href="mailto:careers@futureblackfemale.com"
-              className="px-8 py-3.5 rounded-full bg-slate-950 hover:bg-slate-800 text-[#FDF289] font-bold text-xs uppercase tracking-wider transition-all shadow-md active:scale-95 inline-flex items-center gap-2"
+      {/* 5. GENERAL CV DROP (Full Deep Wine Burgundy Background) */}
+      <section className="py-20 sm:py-24 bg-[#873F50] text-[#FFF9F2] border-t border-[#6e3140]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+          <span className="text-xs uppercase tracking-widest text-[#FDF289] font-bold">
+            FUTURE TALENT POOL
+          </span>
+          <h3 className="font-quando text-3xl sm:text-5xl text-white font-normal">
+            Don't See Your Exact Role?
+          </h3>
+          <p className="text-white/80 text-sm sm:text-base max-w-2xl mx-auto font-light leading-relaxed">
+            We are constantly expanding our research cohorts and community initiatives. Send your CV and portfolio to our talent network.
+          </p>
+          <div className="pt-2">
+            <button
+              onClick={() => onApply({ title: "General Fellowship / Talent Pool", department: "Talent Network", type: "Paid / Flexible" })}
+              className="px-8 py-3.5 rounded-full bg-[#FDF289] hover:bg-[#faee70] text-slate-950 font-bold text-xs uppercase tracking-wider transition-all shadow-md active:scale-95 inline-flex items-center gap-2 cursor-pointer"
             >
-              <span>Email Spontaneous Application</span>
-              <ArrowRight className="w-4 h-4 text-[#FDF289]" />
-            </a>
+              <UploadCloud className="w-4 h-4 text-slate-950" />
+              <span>SUBMIT OPEN APPLICATION</span>
+            </button>
           </div>
         </div>
       </section>

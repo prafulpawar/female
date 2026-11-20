@@ -1,21 +1,20 @@
 import React, { useState } from 'react';
 import { ORG_DATA } from '../../data/fbfData';
-import { Menu, X, ArrowUpRight, Heart, Sparkles, BookOpen, Search } from 'lucide-react';
+import { Menu, X, ArrowUpRight, BookOpen, Search } from 'lucide-react';
 
 export default function T3Header({ onOpenDonate, onNavigate, onOpenCommandPalette, currentPage = 'home' }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: "HOME", page: "home" },
-    { label: "ABOUT", page: "about" },
-    { label: "PROGRAMS", page: "programs" },
-    { label: "EVENTS", page: "events" },
-    { label: "TEAM", page: "team" },
-    { label: "RESEARCH", page: "research" },
-    { label: "BLOG", page: "blog" },
-    { label: "DONATE", page: "donate" },
-    { label: "CAREERS", page: "vacancies" },
-    { label: "CONTACT", page: "contact" }
+    { label: "Home", page: "home" },
+    { label: "About", page: "about" },
+    { label: "Programs", page: "programs" },
+    { label: "Events", page: "events" },
+    { label: "Team", page: "team" },
+    { label: "Research", page: "research" },
+    { label: "Blog", page: "blog" },
+    { label: "Careers", page: "vacancies" },
+    { label: "Contact", page: "contact" }
   ];
 
   const handleLinkClick = (page) => {
@@ -24,72 +23,70 @@ export default function T3Header({ onOpenDonate, onNavigate, onOpenCommandPalett
   };
 
   return (
-    <header className="sticky top-0 z-30 bg-[#FFF9F2]/95 backdrop-blur-md border-b border-[#F7E8E8] text-[#34252A] font-sans transition-all">
+    <header className="sticky top-0 z-40 bg-[#FFF9F2]/95 backdrop-blur-md border-b border-[#F7E8E8] text-[#34252A] font-sans transition-all">
       
-      {/* Top Feminine Modern Micro-Bar */}
+      {/* 1. Top Authentic Micro-Bar */}
       <div className="bg-[#F7E8E8]/70 border-b border-[#EAD5D5] py-1.5 px-4 sm:px-6 lg:px-8 text-xs text-[#873F50]">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Sparkles className="w-3.5 h-3.5 text-[#D68D82]" />
-            <span className="font-medium tracking-wide">
-              Future Black Female • Privileging Black Girls & Women Across Canada & Globally
+            <span className="font-semibold text-[#873F50] tracking-normal">
+              Future Black Female
+            </span>
+            <span className="text-[#873F50]/40 hidden sm:inline">•</span>
+            <span className="font-normal text-[#873F50]/80 hidden sm:inline">
+              Privileging Black Girls & Women Across Canada & Globally
             </span>
           </div>
 
-          <div className="flex items-center gap-4 text-[11px] font-semibold">
-            <span className="hidden sm:inline text-[#873F50]/80">Charity: {ORG_DATA.charityNumber}</span>
-            <span className="hidden sm:inline">•</span>
+          <div className="flex items-center gap-4 text-[11px] font-medium">
+            <span className="hidden sm:inline text-[#873F50]/90">
+              Charity CRA <strong className="font-semibold">#{ORG_DATA.charityNumber}</strong>
+            </span>
+            <span className="hidden sm:inline text-[#873F50]/40">•</span>
             <button 
               onClick={() => handleLinkClick('programs')}
-              className="hover:underline flex items-center gap-1 text-[#873F50]"
+              className="hover:underline flex items-center gap-1 text-[#873F50] font-semibold"
             >
-              <BookOpen className="w-3 h-3" />
-              <span>Melanin & Manuscripts</span>
+              <BookOpen className="w-3 h-3 text-[#873F50]" />
+              <span>Book Club: Melanin & Manuscripts</span>
             </button>
           </div>
         </div>
       </div>
 
-      {/* Main Nav Bar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      {/* 2. Main Navigation Bar */}
+      <div className="w-full max-w-[1600px] mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-18 lg:h-20 gap-1.5 xl:gap-4">
           
-          {/* Logo Mark: FBF. */}
+          {/* Logo Mark: Authentic Future Black Female Logo */}
           <div 
             onClick={() => handleLinkClick('home')}
-            className="flex items-center gap-3 cursor-pointer group"
+            className="flex items-center gap-2 cursor-pointer group py-1 shrink-0 mr-1 xl:mr-3"
           >
-            <div className="w-10 h-10 rounded-full bg-[#F7E8E8] border border-[#D68D82]/40 flex items-center justify-center p-2 group-hover:scale-105 transition-transform shadow-xs">
-              <img 
-                src="/images/branded/fbf-logo.png" 
-                alt="FBF Logo" 
-                className="w-full h-full object-contain"
-                onError={(e) => { e.target.style.display = 'none'; }}
-              />
-            </div>
-            <div>
-              <span className="font-serif font-black text-2xl tracking-tight text-[#873F50] block leading-none">
-                FBF<span className="text-[#D68D82]">.</span>
-              </span>
-              <span className="text-[10px] uppercase font-bold tracking-widest text-[#34252A]/60 block mt-0.5">
-                Future Black Female
-              </span>
-            </div>
+            <img 
+              src="/images/live_site/header_logo.png" 
+              alt="Future Black Female" 
+              className="h-8 sm:h-9 xl:h-10 2xl:h-11 w-auto object-contain transition-transform group-hover:scale-102"
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = '/images/branded/fbf-logo.png';
+              }}
+            />
           </div>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-6 text-xs font-bold tracking-wider text-[#34252A]/80">
+          {/* Desktop Navigation Links - Centered, balanced, no line wraps */}
+          <nav className="hidden lg:flex items-center justify-center flex-1 min-w-0 mx-1 xl:mx-3 2xl:mx-6 gap-0.5 xl:gap-1.5 2xl:gap-3 text-[11px] xl:text-[12.5px] 2xl:text-[13px] font-semibold text-[#34252A]/80 whitespace-nowrap">
             {navLinks.map((link) => {
               const isActive = currentPage === link.page;
               return (
                 <button
                   key={link.page}
                   onClick={() => handleLinkClick(link.page)}
-                  className={`py-1 relative transition-colors ${
+                  className={`py-1.5 px-2 xl:px-2.5 2xl:px-3 rounded-full relative transition-all cursor-pointer whitespace-nowrap shrink-0 ${
                     isActive
-                      ? 'text-[#873F50] font-black after:scale-x-100'
-                      : 'hover:text-[#873F50] after:scale-x-0'
-                  } after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#873F50] after:transition-transform`}
+                      ? 'text-[#873F50] font-bold bg-[#F7E8E8] shadow-2xs'
+                      : 'hover:text-[#873F50] hover:bg-[#F7E8E8]/50'
+                  }`}
                 >
                   {link.label}
                 </button>
@@ -97,28 +94,28 @@ export default function T3Header({ onOpenDonate, onNavigate, onOpenCommandPalett
             })}
           </nav>
 
-          {/* Right Action: Search & DONATE ↗ */}
-          <div className="hidden sm:flex items-center gap-3">
+          {/* Right Actions: Search & DONATE ↗ */}
+          <div className="hidden lg:flex items-center gap-1.5 xl:gap-2.5 2xl:gap-3 shrink-0 whitespace-nowrap">
             <button
               onClick={onOpenCommandPalette}
-              className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#D68D82]/40 bg-[#FFF9F2] hover:bg-[#F7E8E8] text-[#873F50] text-xs font-semibold transition-all shadow-2xs"
+              className="flex items-center gap-1.5 p-2 xl:px-3.5 xl:py-2 rounded-full border border-[#D68D82]/40 bg-[#FFF9F2] hover:bg-[#F7E8E8] text-[#873F50] text-xs font-semibold transition-all shadow-2xs whitespace-nowrap shrink-0"
               title="Search or Jump to Page (Ctrl+K)"
             >
-              <Search className="w-3.5 h-3.5 text-[#D68D82]" />
-              <span>Search</span>
-              <kbd className="px-1.5 py-0.5 text-[9px] bg-[#F7E8E8] text-[#873F50] rounded font-mono font-bold">⌘K</kbd>
+              <Search className="w-3.5 h-3.5 text-[#873F50]" />
+              <span className="hidden xl:inline">Search</span>
+              <kbd className="hidden 2xl:inline px-1.5 py-0.5 text-[9px] bg-[#F7E8E8] text-[#873F50] rounded font-mono font-bold">⌘K</kbd>
             </button>
 
             <button
               onClick={onOpenDonate}
-              className="px-6 py-2.5 rounded-full bg-[#873F50] hover:bg-[#6e3140] text-[#FFF9F2] font-bold text-xs uppercase tracking-wider transition-all shadow-md hover:shadow-lg flex items-center gap-1.5 group"
+              className="px-3.5 py-2 xl:px-6 xl:py-2.5 rounded-full bg-[#873F50] hover:bg-[#6e3140] text-[#FFF9F2] font-bold text-xs uppercase tracking-wider transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-1.5 group cursor-pointer whitespace-nowrap shrink-0"
             >
               <span>DONATE</span>
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </button>
           </div>
 
-          {/* Mobile Menu Toggle Button */}
+          {/* Mobile Menu & Search Actions */}
           <div className="lg:hidden flex items-center gap-2">
             <button
               onClick={onOpenCommandPalette}
@@ -127,12 +124,15 @@ export default function T3Header({ onOpenDonate, onNavigate, onOpenCommandPalett
             >
               <Search className="w-5 h-5" />
             </button>
+
             <button
               onClick={onOpenDonate}
-              className="sm:hidden px-3.5 py-1.5 rounded-full bg-[#873F50] text-[#FFF9F2] text-xs font-bold"
+              className="sm:hidden px-3.5 py-1.5 rounded-full bg-[#873F50] text-[#FFF9F2] text-xs font-bold flex items-center gap-1"
             >
-              Donate ↗
+              <span>Donate</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
             </button>
+
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-xl text-[#34252A] hover:bg-[#F7E8E8] transition-colors"
@@ -145,23 +145,42 @@ export default function T3Header({ onOpenDonate, onNavigate, onOpenCommandPalett
         </div>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* 3. Responsive Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#FFF9F2] border-b border-[#F7E8E8] px-6 py-6 space-y-3 animate-fade-in text-sm font-semibold">
+        <div className="lg:hidden bg-[#FFF9F2] border-b border-[#F7E8E8] px-6 py-6 space-y-4 animate-fade-in shadow-xl">
           <div className="grid grid-cols-2 gap-2">
-            {navLinks.map((link) => (
-              <button
-                key={link.page}
-                onClick={() => handleLinkClick(link.page)}
-                className={`text-left px-3 py-2 rounded-lg ${
-                  currentPage === link.page
-                    ? 'bg-[#F7E8E8] text-[#873F50] font-black'
-                    : 'text-[#34252A] hover:bg-[#F7E8E8]/50'
-                }`}
-              >
-                {link.label}
-              </button>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = currentPage === link.page;
+              return (
+                <button
+                  key={link.page}
+                  onClick={() => handleLinkClick(link.page)}
+                  className={`text-left px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-colors ${
+                    isActive
+                      ? 'bg-[#F7E8E8] text-[#873F50] font-bold shadow-2xs'
+                      : 'text-[#34252A] hover:bg-[#F7E8E8]/60'
+                  }`}
+                >
+                  {link.label}
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="pt-3 border-t border-[#F7E8E8] flex flex-col gap-2">
+            <button
+              onClick={() => {
+                handleLinkClick('donate');
+              }}
+              className="w-full py-3 rounded-full bg-[#873F50] text-[#FFF9F2] font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md"
+            >
+              <span>DONATE TO FUTURE BLACK FEMALE</span>
+              <ArrowUpRight className="w-4 h-4" />
+            </button>
+
+            <div className="text-center text-[11px] text-[#873F50]/70 pt-1">
+              Registered Canadian Charity CRA #{ORG_DATA.charityNumber}
+            </div>
           </div>
         </div>
       )}

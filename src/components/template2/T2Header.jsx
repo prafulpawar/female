@@ -13,7 +13,6 @@ export default function T2Header({ onOpenDonate, onNavigate, currentPage = 'home
     { label: "Team", page: "team" },
     { label: "Research", page: "research" },
     { label: "Blog", page: "blog" },
-    { label: "Donate", page: "donate" },
     { label: "Careers", page: "vacancies" },
     { label: "Contact", page: "contact" }
   ];
@@ -63,31 +62,31 @@ export default function T2Header({ onOpenDonate, onNavigate, currentPage = 'home
       </div>
 
       {/* Main Nav */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      <div className="w-full max-w-[1600px] mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-18 lg:h-20 gap-1.5 xl:gap-4">
 
           {/* Logo Mark */}
           <div
             onClick={() => handleLinkClick('home')}
-            className="flex items-center gap-3 cursor-pointer py-1"
+            className="flex items-center gap-2 cursor-pointer py-1 shrink-0 mr-1 xl:mr-3"
           >
             <img
               src="/images/live_site/header_logo.png"
               alt="Future Black Female"
-              className="h-12 w-auto object-contain"
+              className="h-8 sm:h-9 xl:h-10 2xl:h-11 w-auto object-contain"
               onError={(e) => { e.target.style.display = 'none'; }}
             />
           </div>
 
           {/* Nav Links */}
-          <nav className="hidden lg:flex items-center gap-5 text-xs font-semibold uppercase tracking-wider text-slate-700">
+          <nav className="hidden lg:flex items-center justify-center flex-1 min-w-0 mx-1 xl:mx-3 2xl:mx-6 gap-0.5 xl:gap-1.5 2xl:gap-3 text-[10.5px] xl:text-[12px] 2xl:text-xs font-semibold uppercase tracking-tight xl:tracking-wider text-slate-700 whitespace-nowrap">
             {navItems.map((item) => {
               const isActive = currentPage === item.page;
               return (
                 <button
                   key={item.page}
                   onClick={() => handleLinkClick(item.page)}
-                  className={`transition-colors py-2 border-b-2 ${
+                  className={`transition-colors py-2 px-1.5 xl:px-2.5 border-b-2 whitespace-nowrap shrink-0 ${
                     isActive
                       ? 'text-[#E11D48] border-[#E11D48] font-bold'
                       : 'border-transparent hover:text-[#E11D48] hover:border-rose-200'
@@ -100,7 +99,7 @@ export default function T2Header({ onOpenDonate, onNavigate, currentPage = 'home
           </nav>
 
           {/* Institutional CTA & Search */}
-          <div className="hidden sm:flex items-center gap-2.5">
+          <div className="hidden sm:flex items-center gap-2.5 shrink-0 whitespace-nowrap">
             {onOpenCommandPalette && (
               <button
                 onClick={onOpenCommandPalette}

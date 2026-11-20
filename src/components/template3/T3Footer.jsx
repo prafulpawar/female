@@ -38,10 +38,9 @@ export default function T3Footer({ onNavigate, onOpenDonate }) {
       <div className="bg-[#160B10] border-b border-[#3B252E] py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-left space-y-1">
-            <div className="inline-flex items-center gap-2 text-xs font-mono font-bold text-[#D9B879] uppercase tracking-widest">
-              <Sparkles className="w-3.5 h-3.5 text-[#D9B879]" />
-              <span>SISTERHOOD IN ACTION • OVER 500+ YOUTH EMPOWERED</span>
-            </div>
+            <p className="text-xs uppercase tracking-wider text-[#D9B879] font-semibold">
+              Sisterhood in Action • Over 500+ Youth Empowered
+            </p>
             <h3 className="font-quando text-xl sm:text-2xl text-white font-normal">
               A future where every Black girl can thrive.
             </h3>
@@ -64,7 +63,7 @@ export default function T3Footer({ onNavigate, onOpenDonate }) {
                 </div>
               </div>
             ))}
-            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#5B3396] border-2 border-[#FDF289] text-[#FDF289] flex flex-col items-center justify-center text-[10px] font-bold uppercase tracking-tighter shadow-lg shrink-0">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#5B60E6] border-2 border-[#FDF289] text-[#FDF289] flex flex-col items-center justify-center text-[10px] font-bold uppercase tracking-tighter shadow-lg shrink-0">
               <span>+428</span>
               <span className="text-[8px] font-light">Allies</span>
             </div>
@@ -231,8 +230,8 @@ export default function T3Footer({ onNavigate, onOpenDonate }) {
 
       </div>
 
-      {/* 6. BOTTOM EDITORIAL CREDITS BAR (Matching Screenshot 4 & 5 Purple Bar) */}
-      <div className="bg-[#5B3396] text-white py-4 px-4 sm:px-6 lg:px-8 border-t border-purple-400/30 text-xs">
+      {/* 6. BOTTOM EDITORIAL CREDITS BAR (Matching Electric Indigo Bar) */}
+      <div className="bg-[#5B60E6] text-white py-4 px-4 sm:px-6 lg:px-8 border-t border-indigo-400/30 text-xs">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 font-medium tracking-wide">
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-center sm:text-left text-white/90">
             <span>2022–2026 © FUTURE BLACK FEMALE</span>

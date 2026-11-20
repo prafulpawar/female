@@ -12,7 +12,7 @@ export default function T2Hero({ onOpenDonate, onNavigate }) {
       }}
     >
       {/* Subtle organic warmth overlay */}
-      <div 
+      <div
         className="absolute inset-0 pointer-events-none opacity-20"
         style={{
           backgroundImage: 'radial-gradient(circle at 80% 20%, rgba(253, 242, 137, 0.4) 0%, transparent 50%), radial-gradient(circle at 10% 80%, rgba(255, 255, 255, 0.2) 0%, transparent 40%)'
@@ -24,7 +24,7 @@ export default function T2Hero({ onOpenDonate, onNavigate }) {
 
           {/* Left Column: Human Storytelling, Authentic Typography, High-Converting CTAs */}
           <div className="lg:col-span-7 space-y-8 text-left z-10">
-            
+
             {/* Charity & Identity Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-xs text-rose-100 font-medium shadow-xs">
               <span className="w-2 h-2 rounded-full bg-[#FDF289] animate-pulse" />
@@ -83,7 +83,7 @@ export default function T2Hero({ onOpenDonate, onNavigate }) {
           {/* Right Column: Multi-Layered Editorial Visual Composition (Non-Generic) */}
           <div className="lg:col-span-5 relative z-10 flex justify-center lg:justify-end">
             <div className="relative max-w-md w-full">
-              
+
               {/* Main Photo Card in Crisp White Border with Soft Shadow */}
               <div className="bg-white p-3 rounded-[2.5rem] shadow-2xl relative z-10 transition-transform duration-500 hover:scale-[1.01]">
                 <div className="rounded-[2.2rem] overflow-hidden bg-rose-100 aspect-[4/4.3]">
@@ -99,7 +99,7 @@ export default function T2Hero({ onOpenDonate, onNavigate }) {
               {/* Floating Top Accent Badge */}
               <div className="absolute -top-5 -left-5 z-20 bg-white/95 backdrop-blur-md text-slate-900 py-2.5 px-4 rounded-2xl shadow-xl border border-rose-100 flex items-center gap-3 animate-fade-in hidden sm:flex">
                 <div className="w-9 h-9 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center font-bold">
-                  <Sparkles className="w-5 h-5 text-rose-600" />
+                  <Heart className="w-5 h-5 text-rose-600 fill-rose-600" />
                 </div>
                 <div>
                   <div className="text-xs font-bold text-slate-900">Future Black Female</div>

@@ -35,10 +35,9 @@ export default function T2BentoPillars({ onNavigate }) {
 
             {/* Right Editorial Card with Pink & Warm Accents */}
             <div className="lg:col-span-7 space-y-6 text-left">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-rose-50 border border-rose-200 text-xs font-bold uppercase tracking-widest text-[#E11D48]">
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>OUR PURPOSE & MISSION</span>
-              </div>
+              <p className="text-xs uppercase tracking-wider text-[#E11D48] font-semibold">
+                Our Purpose & Mission
+              </p>
 
               <h2 className="font-quando text-3xl sm:text-4xl lg:text-[42px] font-normal leading-[1.2] text-slate-900">
                 Where Black women increase access to opportunities for Black female youth.
@@ -98,9 +97,9 @@ export default function T2BentoPillars({ onNavigate }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
 
           <div className="max-w-3xl mx-auto text-center space-y-4">
-            <span className="text-xs uppercase font-bold tracking-widest text-[#E11D48] block">
-              SYSTEMIC IMPACT
-            </span>
+            <p className="text-xs uppercase tracking-wider text-[#E11D48] font-semibold">
+              Systemic Impact & Pillars
+            </p>
             <h2 className="font-quando text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-900 tracking-tight">
               Future Black Female Pillars
             </h2>
@@ -259,9 +258,9 @@ export default function T2BentoPillars({ onNavigate }) {
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
 
           <div className="space-y-4 max-w-3xl mx-auto">
-            <span className="text-xs uppercase font-bold tracking-widest text-[#FDF289] block font-mono">
-              THEORY OF CHANGE
-            </span>
+            <p className="text-xs uppercase tracking-wider text-[#FDF289] font-semibold">
+              Theory of Change in Action
+            </p>
             <h2 className="font-quando text-3xl sm:text-4xl lg:text-[46px] font-normal text-[#FDF289] leading-tight">
               The well-being of Black female youth is our motivation.
             </h2>
@@ -302,9 +301,9 @@ export default function T2BentoPillars({ onNavigate }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="shrink-0 text-center md:text-left space-y-1">
-              <span className="text-xs uppercase font-bold tracking-widest text-[#E11D48] block">
-                INSTITUTIONAL BACKING
-              </span>
+              <p className="text-xs uppercase tracking-wider text-[#E11D48] font-semibold">
+                Institutional Partners
+              </p>
               <h3 className="font-quando text-2xl sm:text-3xl text-slate-900">
                 Our Funders & Partners
               </h3>
@@ -337,9 +336,9 @@ export default function T2BentoPillars({ onNavigate }) {
 
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-rose-200 pb-8 text-left">
             <div className="space-y-2">
-              <span className="text-xs uppercase font-bold tracking-widest text-[#E11D48] block">
-                FROM OUR INTERNS & FELLOWS
-              </span>
+              <p className="text-xs uppercase tracking-wider text-[#E11D48] font-semibold">
+                From Our Interns & Fellows
+              </p>
               <h2 className="font-quando text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-900 tracking-tight">
                 Testimonials & Lived Impact
               </h2>

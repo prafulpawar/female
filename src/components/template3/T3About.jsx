@@ -26,10 +26,9 @@ export default function T3About({ onNavigate, onApplyBoard }) {
       {/* 1. LITERARY MONOGRAPH HEADER */}
       <section className="bg-[#873F50] text-[#FFF9F2] py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-b border-[#6e3140]">
         <div className="max-w-7xl mx-auto space-y-6 text-left">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 text-[#D9B879] text-xs font-bold uppercase tracking-widest border border-white/20">
-            <Sparkles className="w-3.5 h-3.5 text-[#D9B879]" />
-            <span>OUR STORY & SISTERHOOD CHARTER</span>
-          </div>
+          <p className="text-xs uppercase tracking-wider text-[#D9B879] font-semibold">
+            Our Story & Sisterhood
+          </p>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-quando font-normal tracking-tight text-[#FFF9F2] max-w-4xl leading-tight">
             A community rooted in dignity, radical kinship, and collective power.
@@ -68,18 +67,17 @@ export default function T3About({ onNavigate, onApplyBoard }) {
         </div>
       </section>
 
-      {/* 2. THE SISTERHOOD FELLOWSHIP: FUTURE BLACK TRAILBLAZERS AWARD (Full Royal Purple Background) */}
-      <section className="py-20 sm:py-24 bg-[#5B3396] text-white border-b border-purple-900/50 relative overflow-hidden">
+      {/* 2. THE SISTERHOOD FELLOWSHIP: FUTURE BLACK TRAILBLAZERS AWARD (Full Royal Electric Indigo Background) */}
+      <section className="py-20 sm:py-24 bg-[#5B60E6] text-white border-b border-indigo-900/40 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="rounded-[2.5rem] bg-white/10 backdrop-blur-md border border-white/20 p-8 sm:p-12 lg:p-14 shadow-2xl">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
               
               <div className="lg:col-span-7 space-y-5 text-left">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 text-[#FDF289] text-xs font-mono font-bold uppercase tracking-widest border border-white/25">
-                  <Sparkles className="w-3.5 h-3.5 text-[#FDF289]" />
-                  <span>ANNUAL SCHOLARSHIP • BROCK UNIVERSITY</span>
-                </div>
+                <p className="text-xs uppercase tracking-wider text-[#FDF289] font-semibold">
+                  Brock University Annual Scholarship
+                </p>
 
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-quando font-normal text-[#FDF289] leading-tight">
                   Future Black Trailblazers Award
@@ -176,9 +174,9 @@ export default function T3About({ onNavigate, onApplyBoard }) {
           {/* 11 Values Tapestry Cluster */}
           <div className="space-y-6 pt-4 text-left">
             <div className="border-b border-[#EAD5D5] pb-3">
-              <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#873F50]">
-                GUIDING CONVICTIONS
-              </span>
+              <p className="text-xs uppercase tracking-wider text-[#873F50] font-semibold">
+                Guiding Convictions
+              </p>
               <h3 className="font-quando font-normal text-2xl text-[#34252A] mt-1">
                 The 11 Sisterhood Values
               </h3>
@@ -208,9 +206,9 @@ export default function T3About({ onNavigate, onApplyBoard }) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
             <div className="lg:col-span-6 space-y-6 text-left">
-              <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#D9B879] block">
-                WHAT WE DO • OUR PRINCIPLES
-              </span>
+              <p className="text-xs uppercase tracking-wider text-[#D9B879] font-semibold">
+                Foundational Principles
+              </p>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-quando font-normal text-[#FFF9F2] leading-tight">
                 Female Empowerment & Black Feminist Thought
@@ -268,9 +266,9 @@ export default function T3About({ onNavigate, onApplyBoard }) {
               </div>
 
               <div className="lg:col-span-8 space-y-4 text-left">
-                <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#873F50] block">
-                  FOUNDER & EXECUTIVE DIRECTOR
-                </span>
+                <p className="text-xs uppercase tracking-wider text-[#873F50] font-semibold">
+                  Founder & Executive Director
+                </p>
                 <h3 className="font-quando font-normal text-2xl sm:text-3xl text-[#34252A]">
                   {ORG_DATA.founder.name}
                 </h3>
@@ -288,9 +286,9 @@ export default function T3About({ onNavigate, onApplyBoard }) {
           <div className="space-y-6 text-left">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#EAD5D5] pb-4">
               <div>
-                <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#873F50]">
-                  SISTERHOOD ADVISORY
-                </span>
+                <p className="text-xs uppercase tracking-wider text-[#873F50] font-semibold">
+                  Sisterhood Advisory
+                </p>
                 <h3 className="font-quando font-normal text-2xl text-[#34252A]">
                   Board of Directors
                 </h3>
@@ -348,9 +346,9 @@ export default function T3About({ onNavigate, onApplyBoard }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-2xl mx-auto space-y-3">
-            <span className="inline-block px-3.5 py-1 rounded-full bg-slate-950 text-[#FDF289] text-xs font-mono font-bold uppercase tracking-widest">
-              LIVED MOMENTS & JOY
-            </span>
+            <p className="text-xs uppercase tracking-wider text-slate-800 font-semibold">
+              Sisterhood in Every Space
+            </p>
             <h2 className="font-quando text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-950 tracking-tight">
               Sisterhood in Every Space
             </h2>

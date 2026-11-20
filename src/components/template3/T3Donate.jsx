@@ -23,10 +23,9 @@ export default function T3Donate({ onOpenDonate }) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
             <div className="lg:col-span-7 space-y-6 text-left">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 text-[#D9B879] text-xs font-mono font-bold uppercase tracking-widest border border-white/20">
-                <Heart className="w-3.5 h-3.5 fill-[#D9B879] text-[#D9B879]" />
-                <span>SUPPORT FUTURE BLACK FEMALE</span>
-              </div>
+              <p className="text-xs uppercase tracking-wider text-[#D9B879] font-semibold">
+                Support Future Black Female
+              </p>
 
               <h2 className="text-3xl sm:text-5xl lg:text-6xl font-quando font-normal tracking-tight text-[#FFF9F2] leading-tight">
                 Fuel Generational Change
@@ -104,9 +103,9 @@ export default function T3Donate({ onOpenDonate }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#873F50]">
-              CORPORATE ALLIES & BENEFACTORS
-            </span>
+            <p className="text-xs uppercase tracking-wider text-[#873F50] font-semibold">
+              Corporate Allies & Benefactors
+            </p>
             <h3 className="text-3xl sm:text-5xl font-quando font-normal text-[#34252A]">
               Partnership Tiers
             </h3>
@@ -160,13 +159,13 @@ export default function T3Donate({ onOpenDonate }) {
         </div>
       </section>
 
-      {/* 3. WHERE EVERY DOLLAR GOES: SISTERHOOD ACCOUNTABILITY (Full Royal Purple Background) */}
-      <section className="py-20 sm:py-28 bg-[#5B3396] text-white border-b border-purple-900/50">
+      {/* 3. WHERE EVERY DOLLAR GOES: SISTERHOOD ACCOUNTABILITY (Full Royal Electric Indigo Background) */}
+      <section className="py-20 sm:py-28 bg-[#5B60E6] text-white border-b border-indigo-900/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <span className="inline-block px-3.5 py-1 rounded-full bg-white/15 text-[#FDF289] text-xs font-mono font-bold uppercase tracking-widest border border-white/20">
-              RADICAL TRANSPARENCY
-            </span>
+            <p className="text-xs uppercase tracking-wider text-[#FDF289] font-semibold">
+              Accountability & Transparency
+            </p>
             <h2 className="font-quando text-3xl sm:text-4xl lg:text-5xl font-normal text-[#FDF289] tracking-tight">
               Where Your Investment Goes
             </h2>

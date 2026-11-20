@@ -54,8 +54,8 @@ export default function T1About({ onNavigate, onApplyBoard }) {
         </div>
       </section>
 
-      {/* 2. EXACT SCREENSHOT 7 (Bottom): About Us Violet-to-Blue Gradient Banner */}
-      <section className="py-14 sm:py-20 bg-gradient-to-r from-[#6949D7] to-[#4378F7] text-white">
+      {/* 2. EXACT SCREENSHOT 7 (Bottom): About Us Electric Indigo Banner */}
+      <section className="py-14 sm:py-20 bg-[#5B60E6] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           <h1 className="text-3xl sm:text-5xl font-quando font-normal text-white">
             About Us
@@ -74,7 +74,7 @@ export default function T1About({ onNavigate, onApplyBoard }) {
             
             {/* Left Column: Photo of Two Black Women Against Graffiti Wall */}
             <div className="lg:col-span-5 space-y-4">
-              <span className="text-xs uppercase font-bold tracking-widest text-[#8558CE] block">
+              <span className="text-xs uppercase font-bold tracking-widest text-[#5B60E6] block">
                 WHY WE EXIST
               </span>
               <h2 className="text-3xl sm:text-4xl font-quando font-normal text-[#1B2828]">
@@ -96,7 +96,7 @@ export default function T1About({ onNavigate, onApplyBoard }) {
               
               {/* VISION */}
               <div className="space-y-2">
-                <span className="text-xs uppercase font-bold tracking-widest text-[#8558CE] block">
+                <span className="text-xs uppercase font-bold tracking-widest text-[#5B60E6] block">
                   VISION
                 </span>
                 <p className="font-quando font-normal text-xl sm:text-2xl text-[#1B2828]">
@@ -106,7 +106,7 @@ export default function T1About({ onNavigate, onApplyBoard }) {
 
               {/* VALUES */}
               <div className="space-y-3">
-                <span className="text-xs uppercase font-bold tracking-widest text-[#8558CE] block">
+                <span className="text-xs uppercase font-bold tracking-widest text-[#5B60E6] block">
                   VALUES
                 </span>
                 <p className="text-stone-800 text-sm sm:text-base leading-relaxed font-medium">
@@ -116,7 +116,7 @@ export default function T1About({ onNavigate, onApplyBoard }) {
 
               {/* MISSION */}
               <div className="space-y-3">
-                <span className="text-xs uppercase font-bold tracking-widest text-[#8558CE] block">
+                <span className="text-xs uppercase font-bold tracking-widest text-[#5B60E6] block">
                   MISSION
                 </span>
                 <p className="text-stone-700 text-sm sm:text-base leading-relaxed">
@@ -137,8 +137,8 @@ export default function T1About({ onNavigate, onApplyBoard }) {
         </div>
       </section>
 
-      {/* 4. EXACT SCREENSHOT 9: What We Do / Our Principles on Royal Purple (#8558CE) */}
-      <section className="py-20 lg:py-24 bg-[#8558CE] text-white">
+      {/* 4. EXACT SCREENSHOT 9: What We Do / Our Principles on Royal Purple (#5B60E6) */}
+      <section className="py-20 lg:py-24 bg-[#5B60E6] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           
           <div className="space-y-1">
@@ -191,7 +191,7 @@ export default function T1About({ onNavigate, onApplyBoard }) {
             </div>
 
             <div className="lg:col-span-8 space-y-4">
-              <span className="text-xs uppercase font-bold tracking-widest text-[#8558CE]">
+              <span className="text-xs uppercase font-bold tracking-widest text-[#5B60E6]">
                 FOUNDER & EXECUTIVE DIRECTOR
               </span>
 
@@ -199,7 +199,7 @@ export default function T1About({ onNavigate, onApplyBoard }) {
                 {ORG_DATA.founder.name}
               </h3>
 
-              <blockquote className="font-quando italic text-base sm:text-lg text-stone-800 leading-relaxed pl-4 border-l-3 border-[#8558CE] py-1">
+              <blockquote className="font-quando italic text-base sm:text-lg text-stone-800 leading-relaxed pl-4 border-l-3 border-[#5B60E6] py-1">
                 "{ORG_DATA.founder.quote}"
               </blockquote>
 
@@ -223,7 +223,7 @@ export default function T1About({ onNavigate, onApplyBoard }) {
           
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 border-b border-stone-200 pb-6">
             <div className="space-y-2">
-              <span className="text-xs uppercase font-bold tracking-widest text-[#8558CE]">
+              <span className="text-xs uppercase font-bold tracking-widest text-[#5B60E6]">
                 FIDUCIARY GOVERNANCE
               </span>
               <h2 className="text-3xl sm:text-4xl font-quando font-normal text-[#1B2828]">
@@ -236,7 +236,7 @@ export default function T1About({ onNavigate, onApplyBoard }) {
 
             <button
               onClick={() => onApplyBoard?.({ title: "Board Member", department: "Governance", type: "Volunteer" })}
-              className="px-6 py-3 rounded-full bg-[#8558CE] hover:bg-[#7245b7] text-white text-xs font-bold uppercase tracking-wider transition-all shadow-md hover:scale-105 shrink-0"
+              className="px-6 py-3 rounded-full bg-[#5B60E6] hover:bg-[#4b50d0] text-white text-xs font-bold uppercase tracking-wider transition-all shadow-md hover:scale-105 shrink-0"
             >
               Apply to Board
             </button>

@@ -61,10 +61,9 @@ export default function T2ResearchVault() {
             <div className="rounded-3xl bg-slate-900 text-white p-8 sm:p-12 overflow-hidden relative shadow-xl">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
                 <div className="lg:col-span-8 space-y-4">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/20 text-[#FDF289] text-xs font-mono font-bold uppercase tracking-wider border border-purple-400/30">
-                    <Sparkles className="w-3.5 h-3.5 text-[#FDF289]" />
-                    <span>FEATURED NATIONAL POLICY MONOGRAPH</span>
-                  </div>
+                  <p className="text-xs uppercase tracking-wider text-[#FDF289] font-semibold">
+                    Featured National Policy Monograph
+                  </p>
                   <h3 className="font-quando text-2xl sm:text-4xl text-white font-normal leading-tight">
                     Guidelines for Culturally Relevant Therapy: A Clinical Blueprint
                   </h3>

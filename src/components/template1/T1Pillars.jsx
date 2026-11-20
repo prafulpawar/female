@@ -30,9 +30,9 @@ export default function T1Pillars({ onNavigate }) {
               </div>
             </div>
 
-            {/* Right Overlapping Purple Card (bg-[#8558CE]) */}
+            {/* Right Overlapping Purple Card (bg-[#5B60E6]) */}
             <div className="lg:col-span-7 lg:-ml-8 mt-6 lg:mt-0 z-20">
-              <div className="bg-[#8558CE] text-white p-8 sm:p-12 lg:p-16 rounded-2xl sm:rounded-3xl lg:rounded-r-3xl shadow-xl space-y-6">
+              <div className="bg-[#5B60E6] text-white p-8 sm:p-12 lg:p-16 rounded-2xl sm:rounded-3xl lg:rounded-r-3xl shadow-xl space-y-6">
                 
                 <span className="text-[#FDF289] font-bold text-xs uppercase tracking-widest block">
                   FUTURE BLACK FEMALE
@@ -100,7 +100,7 @@ export default function T1Pillars({ onNavigate }) {
                   onError={(e) => { e.target.src = '/images/branded/programs-banner.jpg'; }}
                 />
               </div>
-              <div className="bg-[#8558CE] p-5 text-center">
+              <div className="bg-[#5B60E6] p-5 text-center">
                 <span className="font-bold text-white text-xs sm:text-sm uppercase tracking-wider block">
                   FINANCIAL WELLBEING
                 </span>
@@ -130,7 +130,7 @@ export default function T1Pillars({ onNavigate }) {
       </section>
 
       {/* 3. EXACT SCREENSHOT 4: Motivation & 3 Numbered Circles on Royal Purple */}
-      <section className="py-20 lg:py-24 bg-[#8558CE] text-white">
+      <section className="py-20 lg:py-24 bg-[#5B60E6] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-3xl mx-auto space-y-4">

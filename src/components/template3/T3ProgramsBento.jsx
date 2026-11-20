@@ -27,10 +27,9 @@ export default function T3ProgramsBento() {
       {/* 1. EDITORIAL HEADER WITH ISSUE TAG */}
       <div className="bg-[#873F50] text-[#FFF9F2] py-14 sm:py-20 px-4 sm:px-6 lg:px-8 border-b border-[#6e3140]">
         <div className="max-w-7xl mx-auto space-y-4 text-left">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 text-[#D9B879] text-xs font-mono font-bold uppercase tracking-widest border border-white/20">
-            <Sparkles className="w-3.5 h-3.5 text-[#D9B879]" />
-            <span>FBF PROGRAMMATIC CATALOGUE • 12 INITIATIVES</span>
-          </div>
+          <p className="text-xs uppercase tracking-wider text-[#D9B879] font-semibold">
+            12 Core Initiatives
+          </p>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-quando font-normal tracking-tight text-[#FFF9F2] max-w-3xl leading-tight">
             Holistic Care & Sisterhood Initiatives.
@@ -120,9 +119,9 @@ export default function T3ProgramsBento() {
       <div className="py-16 sm:py-20 bg-[#F7E8E8] border-y border-[#EAD5D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           <div className="text-left space-y-2">
-            <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#873F50]">
-              HOLISTIC CONTINUUM OF CARE
-            </span>
+            <p className="text-xs uppercase tracking-wider text-[#873F50] font-semibold">
+              Holistic Continuum of Care
+            </p>
             <h2 className="text-2xl sm:text-4xl font-quando font-normal text-[#34252A]">
               All Specialized Youth Cohorts
             </h2>
@@ -179,13 +178,13 @@ export default function T3ProgramsBento() {
         </div>
       </div>
 
-      {/* 5. TANGIBLE OUTCOMES & LIVING WAGE STRIP (Full Royal Purple Background) */}
-      <section className="py-20 sm:py-24 bg-[#5B3396] text-white border-b border-purple-900/50">
+      {/* 5. TANGIBLE OUTCOMES & LIVING WAGE STRIP (Full Royal Electric Indigo Background) */}
+      <section className="py-20 sm:py-24 bg-[#5B60E6] text-white border-b border-indigo-900/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <span className="inline-block px-3.5 py-1 rounded-full bg-white/15 text-[#FDF289] text-xs font-mono font-bold uppercase tracking-widest border border-white/20">
-              PROGRAMMATIC ACCOUNTABILITY
-            </span>
+            <p className="text-xs uppercase tracking-wider text-[#FDF289] font-semibold">
+              Direct Youth Value
+            </p>
             <h2 className="font-quando text-3xl sm:text-4xl lg:text-5xl font-normal text-[#FDF289] tracking-tight">
               Direct Value for Every Youth
             </h2>
@@ -239,9 +238,9 @@ export default function T3ProgramsBento() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-7 space-y-5 text-left">
-              <span className="inline-block px-3.5 py-1 rounded-full bg-slate-950 text-[#FDF289] text-xs font-mono font-bold uppercase tracking-widest">
-                LITERARY SANCTUARY • AGES 16–22
-              </span>
+              <p className="text-xs uppercase tracking-wider text-slate-800 font-bold">
+                Youth Literary Sanctuary • Ages 16–22
+              </p>
               <h2 className="font-quando text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-950 leading-tight">
                 Melanin & Manuscripts Book Club
               </h2>

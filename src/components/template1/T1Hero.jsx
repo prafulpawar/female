@@ -6,7 +6,7 @@ export default function T1Hero({ onOpenDonate, onNavigate }) {
   return (
     <section 
       id="hero" 
-      className="relative bg-gradient-to-r from-[#6949D7] via-[#8558CE] to-[#E91E63] text-white font-dm overflow-hidden border-b border-purple-900/20"
+      className="relative bg-gradient-to-r from-[#5B60E6] via-[#8558CE] to-[#E91E63] text-white font-dm overflow-hidden border-b border-indigo-900/20"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         

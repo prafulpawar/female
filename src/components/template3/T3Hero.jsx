@@ -5,16 +5,17 @@ import AnimatedCounter from '../shared/AnimatedCounter';
 
 export default function T3Hero({ onOpenDonate, onNavigate }) {
   return (
-    <section 
-      id="t3-hero" 
+    <section
+      id="t3-hero"
       className="relative overflow-hidden font-sans border-b border-[#EAD5D5]"
     >
       {/* 1. TOP ANNOUNCEMENT MASTHEAD */}
       <div className="bg-[#4A2672] text-[#FDF289] py-2 px-4 sm:px-6 lg:px-8 border-b border-white/10">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 text-xs">
-          <div className="flex items-center gap-2 font-mono text-[11px] font-bold tracking-widest uppercase">
-            <Sparkles className="w-3.5 h-3.5 text-[#FDF289]" />
-            <span>FUTURE BLACK FEMALE • REGISTERED CHARITY #{ORG_DATA.charityNumber}</span>
+          <div className="flex items-center gap-2 text-xs font-medium">
+            <span className="text-[#FDF289] font-bold">Future Black Female</span>
+            <span className="text-white/40">•</span>
+            <span className="text-white/80">Registered Canadian Charity #{ORG_DATA.charityNumber}</span>
           </div>
           <div className="flex items-center gap-4 text-[11px] font-medium text-white/90">
             <span className="flex items-center gap-1.5">
@@ -27,24 +28,18 @@ export default function T3Hero({ onOpenDonate, onNavigate }) {
         </div>
       </div>
 
-      {/* 2. AUTHENTIC HERO GRADIENT SPREAD (Matching Screenshot 1) */}
-      <div className="bg-gradient-to-r from-[#5B3396] via-[#8F2E82] to-[#D81B60] text-white py-16 sm:py-24 lg:py-28 relative">
-        
+      {/* 2. AUTHENTIC HERO GRADIENT SPREAD (Matching Electric Indigo Gradient) */}
+      <div className="bg-gradient-to-r from-[#5B60E6] via-[#8F2E82] to-[#D81B60] text-white py-16 sm:py-24 lg:py-28 relative">
+
         {/* Soft background glow circles */}
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-10 w-80 h-80 bg-purple-900/30 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
-            
+
             {/* Left Column (7 cols): Official Headline, Subtitle, and Dual CTA Buttons */}
             <div className="lg:col-span-7 space-y-8 text-left">
-              
-              {/* Eyebrow Pill */}
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-[#FDF289] text-xs font-bold uppercase tracking-widest shadow-2xs">
-                <Sparkles className="w-3.5 h-3.5 text-[#FDF289]" />
-                <span>CAREER • EDUCATION • WELL-BEING</span>
-              </div>
 
               {/* Exact Live Site Headline in Quando Serif */}
               <h1 className="font-quando text-3xl sm:text-5xl lg:text-[56px] font-normal tracking-tight text-white leading-[1.12]">
@@ -108,7 +103,7 @@ export default function T3Hero({ onOpenDonate, onNavigate }) {
             {/* Right Column (5 cols): Photo of Black Women Hugging (Matching Screenshot 1) */}
             <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
               <div className="relative max-w-md w-full">
-                
+
                 {/* Main White Border Photo Frame from Screenshot 1 */}
                 <div className="bg-white p-3 sm:p-4 rounded-[2.8rem] shadow-2xl relative z-10 group transition-transform duration-500 hover:scale-[1.01]">
                   <div className="rounded-[2.4rem] overflow-hidden bg-white aspect-[4/4.6]">

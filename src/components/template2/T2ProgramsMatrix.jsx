@@ -133,10 +133,9 @@ export default function T2ProgramsMatrix() {
         <div className="absolute bottom-0 left-10 w-80 h-80 bg-black/20 rounded-full blur-2xl pointer-events-none" />
 
         <div className="max-w-4xl mx-auto space-y-4 relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md text-[#FDF289] text-xs font-mono font-bold uppercase tracking-widest border border-white/20">
-            <Sparkles className="w-3.5 h-3.5 text-[#FDF289]" />
-            <span>12 CO-DESIGNED INITIATIVES • 100% SUBSIDIZED ACCESS</span>
-          </div>
+          <p className="text-xs uppercase tracking-wider text-[#FDF289] font-semibold">
+            12 Co-Designed Holistic Initiatives
+          </p>
 
           <h1 className="font-quando text-3xl sm:text-5xl lg:text-[54px] font-normal tracking-tight text-white leading-tight">
             Our Programs & Initiatives

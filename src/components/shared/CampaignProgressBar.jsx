@@ -189,7 +189,7 @@ export default function CampaignProgressBar({
                   
                   <div className="flex justify-between items-start">
                     <span className="px-3 py-1 rounded-full bg-white/95 backdrop-blur-sm text-slate-900 text-[11px] font-bold uppercase tracking-wider shadow-sm flex items-center gap-1.5">
-                      <Sparkles className="w-3 h-3 text-amber-500" />
+                      <GraduationCap className="w-3.5 h-3.5 text-amber-600" />
                       <span>Brock U Scholar</span>
                     </span>
                     <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider ${style.highlightBadge}`}>

@@ -174,19 +174,6 @@ export default function Template1View({
         {/* 4. DEDICATED EVENTS CALENDAR PAGE */}
         {currentPage === 'events' && (
           <div className="animate-fade-in">
-            <div className="bg-[#1B2828] text-white py-12 px-4 sm:px-6 lg:px-8 border-b border-[#2C3F3F]">
-              <div className="max-w-7xl mx-auto space-y-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#F8F495]">
-                  Gatherings & Conferences
-                </span>
-                <h1 className="text-3xl sm:text-5xl font-quando font-normal">
-                  Events Calendar & Archive
-                </h1>
-                <p className="text-stone-300 text-sm sm:text-base max-w-3xl">
-                  Upcoming workshops, roundtables, and galas with circular ring pagination (first 5 then 5).
-                </p>
-              </div>
-            </div>
             <T1Events onSelectEvent={onSelectEvent} />
           </div>
         )}
@@ -194,19 +181,6 @@ export default function Template1View({
         {/* 5. DEDICATED OUR TEAM PAGE */}
         {currentPage === 'team' && (
           <div className="animate-fade-in">
-            <div className="bg-[#1B2828] text-white py-12 px-4 sm:px-6 lg:px-8 border-b border-[#2C3F3F]">
-              <div className="max-w-7xl mx-auto space-y-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#F8F495]">
-                  People & Leadership
-                </span>
-                <h1 className="text-3xl sm:text-5xl font-quando font-normal">
-                  Meet the FBF Team
-                </h1>
-                <p className="text-stone-300 text-sm sm:text-base max-w-3xl">
-                  Scholars, clinicians, project directors, and graduate intern fellows dedicated to Black youth equity.
-                </p>
-              </div>
-            </div>
             <T1Team onNavigate={handleNavigate} />
           </div>
         )}
@@ -214,19 +188,6 @@ export default function Template1View({
         {/* 6. DEDICATED RESEARCH HUB PAGE */}
         {currentPage === 'research' && (
           <div className="animate-fade-in">
-            <div className="bg-[#1B2828] text-white py-12 px-4 sm:px-6 lg:px-8 border-b border-[#2C3F3F]">
-              <div className="max-w-7xl mx-auto space-y-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#F8F495]">
-                  Evidence Lab
-                </span>
-                <h1 className="text-3xl sm:text-5xl font-quando font-normal">
-                  Research Hub & Policy Publications
-                </h1>
-                <p className="text-stone-300 text-sm sm:text-base max-w-3xl">
-                  Disaggregated survey data, clinical guidelines, and media coverage centering Black youth.
-                </p>
-              </div>
-            </div>
             <T1Research />
           </div>
         )}
@@ -234,19 +195,6 @@ export default function Template1View({
         {/* 7. DEDICATED BLOG PAGE */}
         {currentPage === 'blog' && (
           <div className="animate-fade-in">
-            <div className="bg-[#1B2828] text-white py-12 px-4 sm:px-6 lg:px-8 border-b border-[#2C3F3F]">
-              <div className="max-w-7xl mx-auto space-y-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#F8F495]">
-                  Essays & Voices
-                </span>
-                <h1 className="text-3xl sm:text-5xl font-quando font-normal">
-                  Community Blog & Dispatches
-                </h1>
-                <p className="text-stone-300 text-sm sm:text-base max-w-3xl">
-                  Feminist perspectives, environmental justice commentary, and reflections on dismantling glass ceilings.
-                </p>
-              </div>
-            </div>
             <T1Blog onSelectPost={onSelectPost} />
           </div>
         )}
@@ -254,19 +202,6 @@ export default function Template1View({
         {/* 8. DEDICATED BUILD & DONATE PAGE */}
         {currentPage === 'donate' && (
           <div className="animate-fade-in">
-            <div className="bg-[#1B2828] text-white py-12 px-4 sm:px-6 lg:px-8 border-b border-[#2C3F3F]">
-              <div className="max-w-7xl mx-auto space-y-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#F8F495]">
-                  Build With Us
-                </span>
-                <h1 className="text-3xl sm:text-5xl font-quando font-normal">
-                  Support Future Black Female
-                </h1>
-                <p className="text-stone-300 text-sm sm:text-base max-w-3xl">
-                  Charitable donations (CRA #{ORG_DATA.charityNumber}) and 6 Corporate Partnership Tiers.
-                </p>
-              </div>
-            </div>
             <T1Donate onOpenModal={onOpenDonate} />
           </div>
         )}
@@ -274,19 +209,6 @@ export default function Template1View({
         {/* 9. DEDICATED VACANCIES & CAREERS PAGE */}
         {currentPage === 'vacancies' && (
           <div className="animate-fade-in">
-            <div className="bg-[#1B2828] text-white py-12 px-4 sm:px-6 lg:px-8 border-b border-[#2C3F3F]">
-              <div className="max-w-7xl mx-auto space-y-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#F8F495]">
-                  Opportunities
-                </span>
-                <h1 className="text-3xl sm:text-5xl font-quando font-normal">
-                  Careers, Internships & Board Roles
-                </h1>
-                <p className="text-stone-300 text-sm sm:text-base max-w-3xl">
-                  Canada Summer Jobs, staff researcher openings, and our JEDI hiring commitment.
-                </p>
-              </div>
-            </div>
             <T1Vacancies onApply={onApplyVacancy} />
           </div>
         )}
@@ -294,19 +216,6 @@ export default function Template1View({
         {/* 10. DEDICATED CONTACT PAGE */}
         {currentPage === 'contact' && (
           <div className="animate-fade-in">
-            <div className="bg-[#1B2828] text-white py-12 px-4 sm:px-6 lg:px-8 border-b border-[#2C3F3F]">
-              <div className="max-w-7xl mx-auto space-y-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#F8F495]">
-                  Connect
-                </span>
-                <h1 className="text-3xl sm:text-5xl font-quando font-normal">
-                  Contact Our Team
-                </h1>
-                <p className="text-stone-300 text-sm sm:text-base max-w-3xl">
-                  Headquartered in St. Catharines, Niagara Region. Serving Black girls and young women across Canada.
-                </p>
-              </div>
-            </div>
             <T1Contact />
           </div>
         )}

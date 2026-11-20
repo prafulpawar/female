@@ -165,19 +165,6 @@ export default function Template3View({
         {/* 4. EVENTS CALENDAR PAGE */}
         {currentPage === 'events' && (
           <div className="animate-fade-in">
-            <div className="bg-[#873F50] text-[#FFF9F2] py-12 px-4 sm:px-6 lg:px-8 border-b border-[#6e3140]">
-              <div className="max-w-7xl mx-auto space-y-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#D9B879]">
-                  Gatherings & Sisters
-                </span>
-                <h1 className="text-3xl sm:text-5xl font-quando font-normal">
-                  Community Events
-                </h1>
-                <p className="text-[#FFF9F2]/80 text-sm sm:text-base max-w-3xl">
-                  Upcoming summits and wellness retreats with circular ring pagination (first 5 then 5).
-                </p>
-              </div>
-            </div>
             <T3Events onSelectEvent={onSelectEvent} />
           </div>
         )}
@@ -185,19 +172,6 @@ export default function Template3View({
         {/* 5. TEAM PAGE */}
         {currentPage === 'team' && (
           <div className="animate-fade-in">
-            <div className="bg-[#873F50] text-[#FFF9F2] py-12 px-4 sm:px-6 lg:px-8 border-b border-[#6e3140]">
-              <div className="max-w-7xl mx-auto space-y-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#D9B879]">
-                  Sisterhood & Leadership
-                </span>
-                <h1 className="text-3xl sm:text-5xl font-quando font-normal">
-                  Our Team & Fellows
-                </h1>
-                <p className="text-[#FFF9F2]/80 text-sm sm:text-base max-w-3xl">
-                  Meet the inspiring women leading change and advocating for Black youth across Canada.
-                </p>
-              </div>
-            </div>
             <T3Team onNavigate={handleNavigate} />
           </div>
         )}
@@ -205,19 +179,6 @@ export default function Template3View({
         {/* 6. RESEARCH HUB PAGE */}
         {currentPage === 'research' && (
           <div className="animate-fade-in">
-            <div className="bg-[#873F50] text-[#FFF9F2] py-12 px-4 sm:px-6 lg:px-8 border-b border-[#6e3140]">
-              <div className="max-w-7xl mx-auto space-y-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#D9B879]">
-                  Empirical Evidence
-                </span>
-                <h1 className="text-3xl sm:text-5xl font-quando font-normal">
-                  Research Hub & Clinical Guides
-                </h1>
-                <p className="text-[#FFF9F2]/80 text-sm sm:text-base max-w-3xl">
-                  Downloadable clinical toolkits and national surveys mapping Black youth mental health in Canada.
-                </p>
-              </div>
-            </div>
             <T3Research />
           </div>
         )}
@@ -225,19 +186,6 @@ export default function Template3View({
         {/* 7. BLOG PAGE */}
         {currentPage === 'blog' && (
           <div className="animate-fade-in">
-            <div className="bg-[#873F50] text-[#FFF9F2] py-12 px-4 sm:px-6 lg:px-8 border-b border-[#6e3140]">
-              <div className="max-w-7xl mx-auto space-y-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#D9B879]">
-                  Stories & Reflections
-                </span>
-                <h1 className="text-3xl sm:text-5xl font-quando font-normal">
-                  Community Blog
-                </h1>
-                <p className="text-[#FFF9F2]/80 text-sm sm:text-base max-w-3xl">
-                  Feminist perspectives, environmental justice, and essays on claiming our sovereign joy.
-                </p>
-              </div>
-            </div>
             <T3Blog onSelectPost={onSelectPost} />
           </div>
         )}
@@ -245,19 +193,6 @@ export default function Template3View({
         {/* 8. DONATE PAGE */}
         {currentPage === 'donate' && (
           <div className="animate-fade-in">
-            <div className="bg-[#873F50] text-[#FFF9F2] py-12 px-4 sm:px-6 lg:px-8 border-b border-[#6e3140]">
-              <div className="max-w-7xl mx-auto space-y-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#D9B879]">
-                  Support Our Mission
-                </span>
-                <h1 className="text-3xl sm:text-5xl font-quando font-normal">
-                  Invest in Black Girls
-                </h1>
-                <p className="text-[#FFF9F2]/80 text-sm sm:text-base max-w-3xl">
-                  Charitable tax receipts (CRA #{ORG_DATA.charityNumber}) and 6 corporate sponsorship tiers.
-                </p>
-              </div>
-            </div>
             <T3Donate onOpenDonate={onOpenDonate} />
           </div>
         )}
@@ -265,19 +200,6 @@ export default function Template3View({
         {/* 9. VACANCIES PAGE */}
         {currentPage === 'vacancies' && (
           <div className="animate-fade-in">
-            <div className="bg-[#873F50] text-[#FFF9F2] py-12 px-4 sm:px-6 lg:px-8 border-b border-[#6e3140]">
-              <div className="max-w-7xl mx-auto space-y-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#D9B879]">
-                  Join Our Team
-                </span>
-                <h1 className="text-3xl sm:text-5xl font-quando font-normal">
-                  Vacancies & Fellowships
-                </h1>
-                <p className="text-[#FFF9F2]/80 text-sm sm:text-base max-w-3xl">
-                  Paid internships, research fellowships, and board steward opportunities.
-                </p>
-              </div>
-            </div>
             <T3Vacancies onApply={onApplyVacancy} />
           </div>
         )}
@@ -285,19 +207,6 @@ export default function Template3View({
         {/* 10. CONTACT PAGE */}
         {currentPage === 'contact' && (
           <div className="animate-fade-in">
-            <div className="bg-[#873F50] text-[#FFF9F2] py-12 px-4 sm:px-6 lg:px-8 border-b border-[#6e3140]">
-              <div className="max-w-7xl mx-auto space-y-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#D9B879]">
-                  Get In Touch
-                </span>
-                <h1 className="text-3xl sm:text-5xl font-quando font-normal">
-                  Contact Future Black Female
-                </h1>
-                <p className="text-[#FFF9F2]/80 text-sm sm:text-base max-w-3xl">
-                  Headquartered in St. Catharines, Niagara Region. Serving Black girls across Canada.
-                </p>
-              </div>
-            </div>
             <T3Contact />
           </div>
         )}
