@@ -153,7 +153,7 @@ export default function T3Header({ onOpenDonate, onNavigate, onOpenCommandPalett
 
             <button
               onClick={onOpenDonate}
-              className="px-3.5 py-1.5 rounded-full bg-[#873F50] hover:bg-[#6e3140] text-[#FFF9F2] text-xs font-bold flex items-center gap-1 shrink-0 cursor-pointer shadow-xs"
+              className="px-3 sm:px-3.5 py-1.5 rounded-full bg-[#873F50] hover:bg-[#6e3140] text-[#FFF9F2] text-[11px] sm:text-xs font-bold flex items-center gap-1 shrink-0 cursor-pointer shadow-xs transition-all active:scale-95"
             >
               <span>Donate</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -162,11 +162,15 @@ export default function T3Header({ onOpenDonate, onNavigate, onOpenCommandPalett
             {/* Hamburger Toggle Button - Always Visible on Right Edge */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 sm:p-2.5 rounded-xl text-[#34252A] bg-[#F7E8E8]/70 hover:bg-[#F7E8E8] border border-[#D68D82]/40 transition-colors cursor-pointer flex items-center justify-center shrink-0 focus:outline-none shadow-2xs"
+              className="p-2 sm:p-2.5 rounded-xl text-[#34252A] bg-[#F7E8E8]/70 hover:bg-[#F7E8E8] border border-[#D68D82]/40 active:scale-95 transition-all cursor-pointer flex items-center justify-center shrink-0 focus:outline-none shadow-2xs"
               aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
               aria-expanded={mobileMenuOpen}
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6 text-[#873F50]" strokeWidth={2.5} />
+              ) : (
+                <Menu className="w-6 h-6 text-[#34252A]" strokeWidth={2.5} />
+              )}
             </button>
           </div>
 
