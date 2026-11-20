@@ -46,6 +46,7 @@ export default function App() {
     else if (page.includes('donate')) targetPage = 'donate';
     else if (page.includes('vacanc') || page.includes('career')) targetPage = 'vacancies';
     else if (page.includes('contact')) targetPage = 'contact';
+    else if (page.includes('login') || page.includes('auth') || page.includes('portal')) targetPage = 'login';
     else targetPage = 'home';
 
     setActivePage(targetPage);

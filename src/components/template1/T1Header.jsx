@@ -8,7 +8,7 @@ export default function T1Header({ onOpenDonate, onNavigate, currentPage = 'home
 
   const navLinks = [
     { label: "Home", page: "home" },
-    { label: "About", page: "about", hasDropdown: true },
+    { label: "About", page: "about", hasDropdown: false },
     { label: "Programs", page: "programs" },
     { label: "Events", page: "events" },
     { label: "Our Team", page: "team" },
@@ -25,23 +25,23 @@ export default function T1Header({ onOpenDonate, onNavigate, currentPage = 'home
   };
 
   const handleLoginClick = () => {
-    alert("FBF Member Portal: Sign-in for Brock scholars, fellows, and mentors.");
+    handleLinkClick('login');
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-white border-b border-[#E8DFC8] text-[#1B2828] font-dm shadow-xs transition-all">
-      <div className="w-full max-w-[1600px] mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-18 lg:h-20 gap-1.5 xl:gap-4">
+    <header className="sticky top-0 z-40 bg-white border-b border-[#E8DFC8] text-[#1B2828] font-dm shadow-xs transition-all w-full">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-18 lg:h-20 gap-2 xl:gap-4 w-full">
 
-          {/* Authentic Brand Logo */}
+          {/* Authentic Brand Logo - Left Aligned */}
           <div
             onClick={() => handleLinkClick('home')}
-            className="flex items-center gap-2 cursor-pointer py-1 group shrink-0 mr-1 xl:mr-3"
+            className="flex items-center gap-2 cursor-pointer py-1 group shrink-0"
           >
             <img
               src="/images/live_site/header_logo.png"
               alt="Future Black Female"
-              className="h-8 sm:h-9 xl:h-10 2xl:h-11 w-auto object-contain transition-transform group-hover:scale-102"
+              className="h-8 sm:h-9 lg:h-9 xl:h-10 2xl:h-11 w-auto object-contain transition-transform group-hover:scale-102"
               onError={(e) => {
                 e.target.onerror = null;
                 e.target.src = '/images/branded/fbf-logo.png';
@@ -49,8 +49,8 @@ export default function T1Header({ onOpenDonate, onNavigate, currentPage = 'home
             />
           </div>
 
-          {/* Desktop Navigation Links - Centered, balanced, no line wraps */}
-          <nav className="hidden lg:flex items-center justify-center flex-1 min-w-0 mx-1 xl:mx-3 2xl:mx-6 gap-0.5 xl:gap-1.5 2xl:gap-3 text-[10.5px] xl:text-[12px] 2xl:text-xs font-bold uppercase tracking-tight xl:tracking-wider text-[#1B2828]/80 whitespace-nowrap">
+          {/* Desktop Navigation Links - Centered, evenly spaced, single horizontal row */}
+          <nav className="hidden lg:flex items-center justify-center flex-1 min-w-0 mx-2 xl:mx-4 2xl:mx-8 gap-0.5 xl:gap-1.5 2xl:gap-3 text-[11px] xl:text-[12px] 2xl:text-xs font-bold uppercase tracking-tight xl:tracking-wider text-[#1B2828]/80 whitespace-nowrap">
             {navLinks.map((link) => {
               const isActive = currentPage === link.page;
 
@@ -64,7 +64,7 @@ export default function T1Header({ onOpenDonate, onNavigate, currentPage = 'home
                     <button
                       onClick={() => handleLinkClick('about')}
                       onMouseEnter={() => setAboutDropdownOpen(true)}
-                      className={`px-1.5 xl:px-2.5 py-2 flex items-center gap-1 border-b-2 whitespace-nowrap shrink-0 transition-colors ${isActive
+                      className={`px-1.5 xl:px-2.5 2xl:px-3 py-2 flex items-center gap-1 border-b-2 whitespace-nowrap shrink-0 transition-colors ${isActive
                         ? 'text-[#D48B28] border-[#D48B28] font-black'
                         : 'border-transparent hover:text-[#D48B28]'
                         }`}
@@ -107,7 +107,7 @@ export default function T1Header({ onOpenDonate, onNavigate, currentPage = 'home
                 <button
                   key={link.page}
                   onClick={() => handleLinkClick(link.page)}
-                  className={`px-1.5 xl:px-2.5 py-2 border-b-2 whitespace-nowrap shrink-0 transition-colors ${isActive
+                  className={`px-1.5 xl:px-2.5 2xl:px-3 py-2 border-b-2 whitespace-nowrap shrink-0 transition-colors ${isActive
                     ? 'text-[#D48B28] border-[#D48B28] font-black'
                     : 'border-transparent hover:text-[#D48B28]'
                     }`}
@@ -118,7 +118,7 @@ export default function T1Header({ onOpenDonate, onNavigate, currentPage = 'home
             })}
           </nav>
 
-          {/* Right Header Actions: Search, Log In, and Donate */}
+          {/* Right Header Actions: Search, Log In, and Donate - Right Aligned */}
           <div className="hidden lg:flex items-center gap-1.5 xl:gap-2.5 2xl:gap-3 shrink-0 whitespace-nowrap">
             {onOpenCommandPalette && (
               <button
@@ -151,11 +151,21 @@ export default function T1Header({ onOpenDonate, onNavigate, currentPage = 'home
             </button>
           </div>
 
-          {/* Mobile Menu & Quick Actions */}
-          <div className="lg:hidden flex items-center gap-2">
+          {/* Tablet & Mobile Header Actions (< 1024px) */}
+          <div className="lg:hidden flex items-center gap-1.5 sm:gap-2">
+            {onOpenCommandPalette && (
+              <button
+                onClick={onOpenCommandPalette}
+                className="p-2 rounded-lg text-stone-700 hover:text-stone-900 hover:bg-[#FAF8F5] transition-colors"
+                title="Search (Ctrl+K)"
+              >
+                <Search className="w-5 h-5 text-[#D48B28]" />
+              </button>
+            )}
+
             <button
               onClick={handleLoginClick}
-              className="p-2 rounded-lg text-[#1B2828] hover:bg-[#FAF8F5]"
+              className="p-2 rounded-lg text-[#1B2828] hover:bg-[#FAF8F5] transition-colors"
               title="Log In"
             >
               <User className="w-5 h-5 text-[#D48B28]" />
@@ -163,15 +173,16 @@ export default function T1Header({ onOpenDonate, onNavigate, currentPage = 'home
 
             <button
               onClick={onOpenDonate}
-              className="sm:hidden px-3.5 py-1.5 rounded-full bg-[#D48B28] text-white text-xs font-bold"
+              className="px-3.5 py-1.5 rounded-full bg-[#D48B28] hover:bg-[#B45309] text-white text-xs font-bold uppercase tracking-wider shadow-xs flex items-center gap-1 shrink-0"
             >
-              Donate
+              <Heart className="w-3 h-3 fill-white" />
+              <span>Donate</span>
             </button>
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-xl text-[#1B2828] hover:bg-[#FAF8F5]"
-              aria-label="Toggle navigation"
+              className="p-2 rounded-xl text-[#1B2828] hover:bg-[#FAF8F5] transition-colors"
+              aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>

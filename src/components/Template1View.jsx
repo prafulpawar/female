@@ -12,6 +12,7 @@ import T1Donate from './template1/T1Donate';
 import T1Vacancies from './template1/T1Vacancies';
 import T1Contact from './template1/T1Contact';
 import T1Footer from './template1/T1Footer';
+import FBFLoginPage from './shared/FBFLoginPage';
 
 // Interactive Components
 import Breadcrumbs from './shared/Breadcrumbs';
@@ -44,6 +45,7 @@ export default function Template1View({
     if (pageOrAnchor.includes('donate') || pageOrAnchor.includes('build')) targetPage = 'donate';
     if (pageOrAnchor.includes('vacanc') || pageOrAnchor.includes('career')) targetPage = 'vacancies';
     if (pageOrAnchor.includes('contact')) targetPage = 'contact';
+    if (pageOrAnchor.includes('login') || pageOrAnchor.includes('auth') || pageOrAnchor.includes('portal')) targetPage = 'login';
 
     setCurrentPage(targetPage);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -217,6 +219,13 @@ export default function Template1View({
         {currentPage === 'contact' && (
           <div className="animate-fade-in">
             <T1Contact />
+          </div>
+        )}
+
+        {/* 11. DEDICATED MEMBER PORTAL & LOGIN PAGE */}
+        {currentPage === 'login' && (
+          <div className="animate-fade-in">
+            <FBFLoginPage theme="t1" onNavigate={handleNavigate} onOpenDonate={onOpenDonate} />
           </div>
         )}
 

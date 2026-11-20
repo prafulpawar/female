@@ -131,13 +131,19 @@ export default function T3About({ onNavigate, onApplyBoard }) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div className="lg:col-span-5">
-              <div className="rounded-3xl overflow-hidden border-4 border-white shadow-xl aspect-[4/5] bg-stone-100">
+              <div className="relative rounded-[2.5rem] overflow-hidden border-4 border-white shadow-2xl aspect-[4/3] sm:aspect-[16/11] bg-stone-100 group">
                 <img
                   src="/images/downloaded/about_29.jpg"
                   alt="Two young Black women smiling together in community"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top group-hover:scale-103 transition-transform duration-700"
                   onError={(e) => { e.target.src = '/images/live_site/about_two_women.jpg'; }}
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-6">
+                  <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-xs font-medium">
+                    <span className="w-2 h-2 rounded-full bg-[#FDF289]" />
+                    <span>Sisterhood in Community • St. Catharines HQ</span>
+                  </div>
+                </div>
               </div>
             </div>
 

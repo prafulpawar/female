@@ -12,6 +12,7 @@ import T2DonateTiers from './template2/T2DonateTiers';
 import T2CareerPortal from './template2/T2CareerPortal';
 import T2ContactConsole from './template2/T2ContactConsole';
 import T2Footer from './template2/T2Footer';
+import FBFLoginPage from './shared/FBFLoginPage';
 
 // Shared Components
 import Breadcrumbs from './shared/Breadcrumbs';
@@ -43,6 +44,7 @@ export default function Template2View({
     if (pageOrAnchor.includes('donate')) targetPage = 'donate';
     if (pageOrAnchor.includes('vacanc') || pageOrAnchor.includes('career')) targetPage = 'vacancies';
     if (pageOrAnchor.includes('contact')) targetPage = 'contact';
+    if (pageOrAnchor.includes('login') || pageOrAnchor.includes('auth') || pageOrAnchor.includes('portal')) targetPage = 'login';
 
     setCurrentPage(targetPage);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -304,6 +306,13 @@ export default function Template2View({
               </div>
             </div>
             <T2ContactConsole />
+          </div>
+        )}
+
+        {/* 11. LOGIN & MEMBER PORTAL */}
+        {currentPage === 'login' && (
+          <div className="animate-fade-in">
+            <FBFLoginPage theme="t2" onNavigate={handleNavigate} onOpenDonate={onOpenDonate} />
           </div>
         )}
 

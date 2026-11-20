@@ -47,7 +47,8 @@ export default function TemplateSwitcher({
     { label: "Blog", id: "blog" },
     { label: "Build & Donate", id: "donate" },
     { label: "Careers", id: "vacancies" },
-    { label: "Contact", id: "contact" }
+    { label: "Contact", id: "contact" },
+    { label: "Log In Portal", id: "login" }
   ];
 
   const currentTemplateObj = templates.find(t => t.id === activeTemplate) || templates[0];

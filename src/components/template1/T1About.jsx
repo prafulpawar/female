@@ -68,64 +68,83 @@ export default function T1About({ onNavigate, onApplyBoard }) {
 
       {/* 3. EXACT SCREENSHOT 8: Why We Exist / Our Beliefs (Vision, Values, Mission) */}
       <section className="py-20 lg:py-28 bg-white border-b border-stone-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            
-            {/* Left Column: Photo of Two Black Women Against Graffiti Wall */}
-            <div className="lg:col-span-5 space-y-4">
-              <span className="text-xs uppercase font-bold tracking-widest text-[#5B60E6] block">
-                WHY WE EXIST
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-quando font-normal text-[#1B2828]">
-                Our Beliefs
-              </h2>
+          {/* Header */}
+          <div className="text-left space-y-2 max-w-3xl">
+            <span className="text-xs uppercase font-bold tracking-widest text-[#5B60E6] block">
+              WHY WE EXIST
+            </span>
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-quando font-normal text-[#1B2828] leading-tight">
+              Our Beliefs
+            </h2>
+            <p className="text-stone-600 text-sm sm:text-base font-light leading-relaxed">
+              Anchored in Black feminist principles, intersectional community care, and generational empowerment across Canada.
+            </p>
+          </div>
 
-              <div className="rounded-3xl overflow-hidden shadow-xl border-4 border-white aspect-[3/4] bg-stone-100 max-w-md mx-auto lg:max-w-none mt-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            
+            {/* Left Column: Photo of Two Black Women Against Graffiti Wall (Fixed aspect ratio & frame) */}
+            <div className="lg:col-span-5">
+              <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] sm:aspect-[16/11] bg-stone-100 group">
                 <img
                   src="/images/downloaded/about_29.jpg"
-                  alt="Two Black Women smiling against street graffiti wall"
-                  className="w-full h-full object-cover"
+                  alt="Two Black Women smiling against street graffiti wall - Future Black Female"
+                  className="w-full h-full object-cover object-top group-hover:scale-103 transition-transform duration-700"
                   onError={(e) => { e.target.src = '/images/live_site/about_two_women.jpg'; }}
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-6">
+                  <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-xs font-medium">
+                    <span className="w-2 h-2 rounded-full bg-[#FDF289]" />
+                    <span>Sisterhood in Action • St. Catharines HQ</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Right Column: Vision, Values, Mission in Purple Headers */}
-            <div className="lg:col-span-7 space-y-8 pt-4 lg:pt-10">
+            {/* Right Column: Vision, Mission, and Values */}
+            <div className="lg:col-span-7 space-y-6 text-left">
               
-              {/* VISION */}
-              <div className="space-y-2">
+              {/* VISION CARD */}
+              <div className="p-6 sm:p-7 rounded-3xl bg-[#FAF8F5] border border-[#E8DFC8] space-y-2 shadow-xs hover:border-[#5B60E6]/50 transition-colors">
                 <span className="text-xs uppercase font-bold tracking-widest text-[#5B60E6] block">
                   VISION
                 </span>
-                <p className="font-quando font-normal text-xl sm:text-2xl text-[#1B2828]">
+                <p className="font-quando font-normal text-2xl sm:text-3xl text-[#1B2828] leading-snug">
                   Community-Empowered Black Female Youth
                 </p>
               </div>
 
-              {/* VALUES */}
-              <div className="space-y-3">
-                <span className="text-xs uppercase font-bold tracking-widest text-[#5B60E6] block">
-                  VALUES
-                </span>
-                <p className="text-stone-800 text-sm sm:text-base leading-relaxed font-medium">
-                  {ABOUT_VALUES.join(' • ')}
-                </p>
-              </div>
-
-              {/* MISSION */}
-              <div className="space-y-3">
+              {/* MISSION CARD */}
+              <div className="p-6 sm:p-7 rounded-3xl bg-white border border-[#E8DFC8] space-y-2 shadow-xs hover:border-[#5B60E6]/50 transition-colors">
                 <span className="text-xs uppercase font-bold tracking-widest text-[#5B60E6] block">
                   MISSION
                 </span>
-                <p className="text-stone-700 text-sm sm:text-base leading-relaxed">
+                <p className="text-stone-700 text-sm sm:text-base leading-relaxed font-light">
                   To increase access to opportunities that result in Black female youth across the globe becoming more socially, politically, and economically empowered through strong networks, skills advancement, and rights-based advocacy.
                 </p>
               </div>
 
+              {/* CORE VALUES */}
+              <div className="space-y-3 pt-2">
+                <span className="text-xs uppercase font-bold tracking-widest text-[#5B60E6] block">
+                  VALUES
+                </span>
+                <div className="flex flex-wrap gap-2">
+                  {ABOUT_VALUES.map((val) => (
+                    <span
+                      key={val}
+                      className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-[#FAF8F5] border border-[#E8DFC8] text-[#1B2828] hover:border-[#5B60E6] transition-colors"
+                    >
+                      {val}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
               {/* Canadian Registration Verification Pill */}
-              <div className="pt-4 border-t border-stone-200 flex items-center gap-2 text-xs text-stone-600 font-semibold">
+              <div className="pt-2 flex items-center gap-2 text-xs text-stone-600 font-semibold">
                 <ShieldCheck className="w-4 h-4 text-emerald-600" />
                 <span>Canadian Registered Charity #{ORG_DATA.charityNumber} • St. Catharines HQ</span>
               </div>

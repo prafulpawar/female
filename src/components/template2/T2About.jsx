@@ -77,12 +77,18 @@ export default function T2About({ onNavigate, onApplyBoard }) {
             
             {/* Left Photo: Two Women against graffiti wall (Exact Screenshot 10) */}
             <div className="lg:col-span-5">
-              <div className="rounded-[2.5rem] overflow-hidden shadow-xl aspect-[4/5] bg-slate-100 max-w-sm mx-auto lg:max-w-none">
+              <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] sm:aspect-[16/11] bg-slate-100 max-w-sm mx-auto lg:max-w-none group">
                 <img
                   src="/images/live_site/about_two_women.jpg"
                   alt="Two young Black women smiling together against colorful wall"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top group-hover:scale-103 transition-transform duration-700"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-6">
+                  <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-xs font-medium">
+                    <span className="w-2 h-2 rounded-full bg-[#FDF289]" />
+                    <span>Civic Empowerment • Niagara Region</span>
+                  </div>
+                </div>
               </div>
             </div>
 

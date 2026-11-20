@@ -12,6 +12,7 @@ import T3Donate from './template3/T3Donate';
 import T3Vacancies from './template3/T3Vacancies';
 import T3Contact from './template3/T3Contact';
 import T3Footer from './template3/T3Footer';
+import FBFLoginPage from './shared/FBFLoginPage';
 
 // Interactive Components
 import Breadcrumbs from './shared/Breadcrumbs';
@@ -45,6 +46,7 @@ export default function Template3View({
     if (pageOrAnchor.includes('donate')) targetPage = 'donate';
     if (pageOrAnchor.includes('vacanc') || pageOrAnchor.includes('career')) targetPage = 'vacancies';
     if (pageOrAnchor.includes('contact')) targetPage = 'contact';
+    if (pageOrAnchor.includes('login') || pageOrAnchor.includes('auth') || pageOrAnchor.includes('portal')) targetPage = 'login';
 
     setCurrentPage(targetPage);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -208,6 +210,13 @@ export default function Template3View({
         {currentPage === 'contact' && (
           <div className="animate-fade-in">
             <T3Contact />
+          </div>
+        )}
+
+        {/* 11. LOGIN & MEMBER PORTAL */}
+        {currentPage === 'login' && (
+          <div className="animate-fade-in">
+            <FBFLoginPage theme="t3" onNavigate={handleNavigate} onOpenDonate={onOpenDonate} />
           </div>
         )}
 

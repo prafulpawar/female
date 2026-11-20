@@ -12,7 +12,8 @@ export default function Breadcrumbs({ currentPage, onNavigate, theme = 'warm' })
     blog: "Community Blog & Perspectives",
     donate: "Invest & Donate",
     vacancies: "Careers & Internships",
-    contact: "Contact Us"
+    contact: "Contact Us",
+    login: "Member Portal & Sign In"
   };
 
   const currentLabel = pageLabels[currentPage] || "Page";
@@ -41,7 +42,7 @@ export default function Breadcrumbs({ currentPage, onNavigate, theme = 'warm' })
   const currentTheme = themeConfig[theme] || themeConfig.warm;
 
   return (
-    <nav aria-label="Breadcrumb" className="py-3 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-xs font-dm">
+    <nav aria-label="Breadcrumb" className="py-3 px-4 sm:px-6 lg:px-8 w-full text-xs font-dm">
       <ol className={`flex items-center gap-1.5 ${currentTheme.text}`}>
         <li>
           <button

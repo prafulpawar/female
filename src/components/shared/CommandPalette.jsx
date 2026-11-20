@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Search, Compass, BookOpen, Heart, FileText, ArrowRight, X, Layers, Users, Calendar } from 'lucide-react';
+import { Search, Compass, BookOpen, Heart, FileText, ArrowRight, X, Layers, Users, Calendar, KeyRound } from 'lucide-react';
 import { PROGRAMS, GOVERNANCE_REPORTS } from '../../data/fbfData';
 
 export default function CommandPalette({ isOpen, onClose, onNavigate, onSelectTemplate, onOpenDonate }) {
@@ -42,6 +42,7 @@ export default function CommandPalette({ isOpen, onClose, onNavigate, onSelectTe
     { type: 'page', title: 'Build & Donate', subtitle: 'Tax-Deductible Gifts & 6 Partnership Tiers', id: 'donate', icon: Heart },
     { type: 'page', title: 'Careers & CSJ', subtitle: 'Job Vacancies & Volunteer Openings', id: 'vacancies', icon: Compass },
     { type: 'page', title: 'Contact Us', subtitle: 'St. Catharines HQ & Inquiries', id: 'contact', icon: Compass },
+    { type: 'page', title: 'Member Portal & Log In', subtitle: 'Brock scholars, clinicians, donors & governance gateway', id: 'login', icon: KeyRound },
   ];
 
   const templatesList = [
