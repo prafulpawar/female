@@ -1,20 +1,23 @@
 import React, { useState } from 'react';
-import { Menu, X, Heart, Shield, FileText, ChevronRight, Search, User } from 'lucide-react';
+import { 
+  Menu, X, Heart, Shield, FileText, ChevronRight, Search, User,
+  Home, BookOpen, Calendar, Users, Briefcase, Newspaper, Mail 
+} from 'lucide-react';
 import { ORG_DATA, GOVERNANCE_REPORTS } from '../../data/fbfData';
 
 export default function T2Header({ onOpenDonate, onNavigate, currentPage = 'home', onOpenCommandPalette }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "Home", page: "home" },
-    { label: "About", page: "about" },
-    { label: "Programs", page: "programs" },
-    { label: "Events", page: "events" },
-    { label: "Team", page: "team" },
-    { label: "Research", page: "research" },
-    { label: "Blog", page: "blog" },
-    { label: "Careers", page: "vacancies" },
-    { label: "Contact", page: "contact" }
+    { label: "Home", page: "home", icon: Home, desc: "Canadian Equity & Community Impact" },
+    { label: "About", page: "about", icon: Shield, desc: "Governance, Principles & Reports" },
+    { label: "Programs", page: "programs", icon: BookOpen, desc: "Pillars & Initiatives" },
+    { label: "Events", page: "events", icon: Calendar, desc: "Conferences & Roundtables" },
+    { label: "Team", page: "team", icon: Users, desc: "Leadership, Board & Interns" },
+    { label: "Research", page: "research", icon: FileText, desc: "Disaggregated Knowledge Hub" },
+    { label: "Blog", page: "blog", icon: Newspaper, desc: "Policy Perspectives & Essays" },
+    { label: "Careers", page: "vacancies", icon: Briefcase, desc: "Career Opportunities & CSJ" },
+    { label: "Contact", page: "contact", icon: Mail, desc: "National HQ & Inquiries" }
   ];
 
   const handleLinkClick = (page) => {
@@ -72,12 +75,12 @@ export default function T2Header({ onOpenDonate, onNavigate, currentPage = 'home
           {/* Logo Mark - Left Aligned */}
           <div
             onClick={() => handleLinkClick('home')}
-            className="flex items-center gap-2 cursor-pointer py-1 group shrink-0"
+            className="flex items-center gap-2 cursor-pointer py-1 group shrink min-w-0"
           >
             <img
               src="/images/live_site/header_logo.png"
               alt="Future Black Female"
-              className="h-8 sm:h-9 lg:h-9 xl:h-10 2xl:h-11 w-auto object-contain transition-transform group-hover:scale-102"
+              className="h-6 sm:h-8 lg:h-9 xl:h-10 2xl:h-11 max-w-[160px] sm:max-w-[240px] lg:max-w-none w-auto object-contain transition-transform group-hover:scale-102"
               onError={(e) => {
                 e.target.onerror = null;
                 e.target.src = '/images/branded/fbf-logo.png';
@@ -138,12 +141,12 @@ export default function T2Header({ onOpenDonate, onNavigate, currentPage = 'home
             </button>
           </div>
 
-          {/* Tablet & Mobile Header Actions (< 1024px) */}
-          <div className="lg:hidden flex items-center gap-1.5 sm:gap-2">
+          {/* Tablet & Mobile Header Actions (< 1024px) - Clean, Prominent Hamburger Menu */}
+          <div className="lg:hidden flex items-center gap-1.5 sm:gap-2 shrink-0 ml-auto">
             {onOpenCommandPalette && (
               <button
                 onClick={onOpenCommandPalette}
-                className="p-2 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-rose-50 transition-colors cursor-pointer"
+                className="hidden sm:flex p-2 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-rose-50 transition-colors cursor-pointer shrink-0"
                 title="Search (Ctrl+K)"
               >
                 <Search className="w-5 h-5 text-[#BE185D]" />
@@ -152,7 +155,7 @@ export default function T2Header({ onOpenDonate, onNavigate, currentPage = 'home
 
             <button
               onClick={handleLoginClick}
-              className="p-2 rounded-lg text-slate-700 hover:bg-rose-50 transition-colors cursor-pointer"
+              className="hidden sm:flex p-2 rounded-lg text-slate-700 hover:bg-rose-50 transition-colors cursor-pointer shrink-0"
               title="Log In"
             >
               <User className="w-5 h-5 text-[#BE185D]" />
@@ -160,67 +163,140 @@ export default function T2Header({ onOpenDonate, onNavigate, currentPage = 'home
 
             <button
               onClick={onOpenDonate}
-              className="px-3.5 py-1.5 rounded-full bg-[#BE185D] hover:bg-[#9d174d] text-white text-xs font-bold uppercase tracking-wider shadow-xs flex items-center gap-1 shrink-0 cursor-pointer"
+              className="px-3 sm:px-3.5 py-1.5 rounded-full bg-[#BE185D] hover:bg-[#9d174d] text-white text-[11px] sm:text-xs font-bold uppercase tracking-wider shadow-xs flex items-center gap-1 shrink-0 cursor-pointer transition-all active:scale-95"
             >
               <Heart className="w-3 h-3 fill-white" />
               <span>Donate</span>
             </button>
 
+            {/* Hamburger Toggle Button - Always Visible on Right Edge */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-xl text-slate-700 hover:bg-rose-50 transition-colors cursor-pointer"
-              aria-label="Toggle navigation menu"
+              className="p-2 sm:p-2.5 rounded-xl text-slate-800 bg-rose-50/70 hover:bg-rose-100 border border-rose-200 active:scale-95 transition-all cursor-pointer flex items-center justify-center shrink-0 focus:outline-none shadow-2xs"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={mobileMenuOpen}
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6 text-[#BE185D]" strokeWidth={2.5} />
+              ) : (
+                <Menu className="w-6 h-6 text-slate-800" strokeWidth={2.5} />
+              )}
             </button>
           </div>
 
         </div>
       </div>
 
-      {/* Responsive Mobile Drawer */}
+      {/* Responsive Mobile Drawer & Backdrop */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-rose-100 px-6 py-6 space-y-4 animate-fade-in shadow-xl font-sans">
-          <div className="grid grid-cols-2 gap-2 text-sm font-semibold">
-            {navItems.map((item) => (
+        <>
+          {/* Backdrop Overlay */}
+          <div 
+            className="fixed inset-0 top-18 sm:top-20 lg:hidden bg-slate-900/40 backdrop-blur-xs z-30 animate-fade-in"
+            onClick={() => setMobileMenuOpen(false)}
+          />
+
+          {/* Drawer Menu Panel */}
+          <div className="relative z-40 lg:hidden bg-white border-b border-rose-100 shadow-2xl font-sans w-full max-h-[calc(100vh-4.5rem)] overflow-y-auto divide-y divide-rose-50 animate-fade-in">
+            
+            {/* Quick Search in Mobile Drawer */}
+            {onOpenCommandPalette && (
+              <div className="p-4 bg-rose-50/40">
+                <button
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    onOpenCommandPalette();
+                  }}
+                  className="w-full flex items-center gap-2.5 px-4 py-3 rounded-2xl border border-rose-200 bg-white text-slate-700 text-xs font-medium cursor-pointer shadow-2xs hover:border-[#BE185D]"
+                >
+                  <Search className="w-4 h-4 text-[#BE185D]" />
+                  <span>Search pages, programs & reports...</span>
+                  <kbd className="ml-auto px-2 py-0.5 text-[9px] bg-rose-50 border border-rose-200 rounded font-mono font-bold text-slate-600">⌘K</kbd>
+                </button>
+              </div>
+            )}
+
+            {/* Navigation Links - Single Column Mobile List with Icons & Descriptions */}
+            <div className="p-3 space-y-1">
+              {navItems.map((item) => {
+                const isActive = currentPage === item.page;
+                const IconComp = item.icon;
+                return (
+                  <button
+                    key={item.page}
+                    onClick={() => handleLinkClick(item.page)}
+                    className={`w-full p-3 rounded-2xl transition-all cursor-pointer flex items-center gap-3.5 text-left ${
+                      isActive
+                        ? 'bg-rose-50 text-[#BE185D] font-bold border-l-4 border-[#BE185D] shadow-2xs'
+                        : 'text-slate-800 hover:bg-slate-50'
+                    }`}
+                  >
+                    <div className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${
+                      isActive ? 'bg-[#BE185D] text-white shadow-xs' : 'bg-slate-100 text-slate-600'
+                    }`}>
+                      <IconComp className="w-4 h-4" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between">
+                        <strong className="block text-sm font-bold text-slate-900 leading-tight">
+                          {item.label}
+                        </strong>
+                        <ChevronRight className={`w-4 h-4 shrink-0 transition-transform ${
+                          isActive ? 'text-[#BE185D] translate-x-0.5' : 'text-slate-400'
+                        }`} />
+                      </div>
+                      {item.desc && (
+                        <span className="block text-[11px] text-slate-500 truncate mt-0.5">
+                          {item.desc}
+                        </span>
+                      )}
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Action CTAs: Member Log In & Donate */}
+            <div className="p-4 bg-slate-50/60 space-y-3">
               <button
-                key={item.page}
-                onClick={() => handleLinkClick(item.page)}
-                className={`text-left px-3.5 py-2.5 rounded-xl transition-colors cursor-pointer ${
-                  currentPage === item.page
-                    ? 'bg-rose-50 font-bold text-[#BE185D]'
-                    : 'text-slate-800 hover:bg-slate-50'
+                onClick={handleLoginClick}
+                className={`w-full py-3 px-4 rounded-2xl border text-xs font-bold uppercase tracking-wider flex items-center justify-between cursor-pointer transition-all ${
+                  currentPage === 'login'
+                    ? 'border-[#BE185D] bg-white text-[#BE185D] shadow-xs'
+                    : 'border-slate-200 bg-white text-slate-800 hover:border-[#BE185D]'
                 }`}
               >
-                {item.label}
+                <div className="flex items-center gap-2.5">
+                  <div className="w-7 h-7 rounded-lg bg-rose-50 text-[#BE185D] flex items-center justify-center">
+                    <User className="w-4 h-4" />
+                  </div>
+                  <div className="text-left">
+                    <span className="block leading-tight font-bold">Member Portal</span>
+                    <span className="block text-[10px] text-slate-500 font-normal normal-case">Sign in for Brock scholars & fellows</span>
+                  </div>
+                </div>
+                <ChevronRight className="w-4 h-4 text-slate-400" />
               </button>
-            ))}
-          </div>
 
-          <div className="pt-3 border-t border-rose-100 flex flex-col gap-2">
-            <button
-              onClick={handleLoginClick}
-              className="w-full py-2.5 rounded-xl border border-rose-200 text-slate-800 text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer"
-            >
-              <User className="w-4 h-4 text-[#BE185D]" />
-              <span>Member Log In</span>
-            </button>
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  onOpenDonate();
+                }}
+                className="w-full py-3.5 rounded-full bg-[#BE185D] hover:bg-[#9d174d] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md hover:shadow-lg cursor-pointer transition-all"
+              >
+                <Heart className="w-4 h-4 fill-white" />
+                <span>Support Our Mission (Donate)</span>
+              </button>
 
-            <button
-              onClick={() => {
-                handleLinkClick('donate');
-              }}
-              className="w-full py-3 rounded-full bg-[#BE185D] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm cursor-pointer"
-            >
-              <Heart className="w-4 h-4 fill-white" />
-              <span>Support Our Mission (Donate)</span>
-            </button>
-
-            <div className="text-center text-[11px] text-slate-500 pt-1">
-              Registered Canadian Charity CRA #{ORG_DATA.charityNumber}
+              <div className="text-center text-[11px] text-slate-500 pt-1 space-y-0.5">
+                <div>National Office: St. Catharines, ON</div>
+                <div className="text-[10px] text-slate-400">Registered Canadian Charity CRA #{ORG_DATA.charityNumber}</div>
+              </div>
             </div>
+
           </div>
-        </div>
+        </>
       )}
 
     </header>
